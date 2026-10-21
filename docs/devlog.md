@@ -14,6 +14,7 @@ Pracovný denník repozitára. Najnovší záznam hore. E‑maily, tokeny a ID s
 - Webový nástroj načítava `qrcode-generator` z cdnjs (pinovaná 1.4.4); bez internetu funguje len `npm run qr`.
 
 **Čo nefungovalo a prečo**
+- Úložisko assetov artefaktu odstránilo z nahraného SVG vložené logo (sanitizácia `href` s data URI); v artefakte je preto náhľad QR ako PNG a dokumentácia odporúča PNG pre takéto systémy.
 - Pri polomere bodu 0,43 modulu zlyhávali dlhé odkazy častejšie; zväčšené na 0,46.
 
 ## 2026-10-21
