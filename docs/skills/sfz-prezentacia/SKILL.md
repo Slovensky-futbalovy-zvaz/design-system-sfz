@@ -32,7 +32,7 @@ Potom navrhni osnovu (bloky, minutáž, počet slajdov) a počkaj na schválenie
 4. **Kľúčové čísla** – max. 3 dlaždice; najviac jedno číslo červené, jedna dlaždica zvýraznená modrým tintom. Pri nákladoch alebo rozpočte vzor **Čísla s rozpisom** (`StatBreakdown`): tri dlaždice vľavo, rozpis so sumami v `LinkList` vpravo; súčty prepočítaj, obdobie (mesačne, ročne) vždy uveď.
 5. **Časová os** – vodorovná max. 6 bodov; pre 6 – 10 udalostí zvislá os s krúžkami (`TimelineVertical`), rok a text v jednom riadku. Pointa (zlom) červená, najviac jedna.
 6. **Citát a karty** – tvrdenie + citát v slovenských úvodzovkách „ “.
-7. **Záver** – „Ďakujem. Otázky?“, kontakt (e‑mail, LinkedIn), weby SFZ a QR kód v bielej karte vpravo. QR kód vytvor generátorom SFZ (`tools/qr/` v repozitári, `npm run qr -- "odkaz"`): okrúhle body, logo SFZ v strede, tvar kruh. Odkaz daj ten, ktorý zadá používateľ; nikdy si ho nevymýšľaj. Kód pred použitím over dekóderom.
+7. **Záver** – „Ďakujem. Otázky?“, kontakt (e‑mail, LinkedIn), weby SFZ a QR kód v bielej karte vpravo. QR kód vytvor generátorom SFZ (`tools/qr/` v repozitári, `npm run qr -- "odkaz"`): okrúhle body, logo SFZ v strede, tvar kruh. Odkaz daj ten, ktorý zadá používateľ; nikdy si ho nevymýšľaj. Kód pred použitím over dekóderom. Do prezentácie nahraj PNG (úložisko assetov zo SVG odstráni vložené logo).
 
 Päta každého slajdu: vľavo názov prezentácie a číslo slajdu, vpravo logo SFZ. Vzory sú v repozitári v `templates/prezentacie/`.
 
