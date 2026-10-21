@@ -28,11 +28,11 @@ Potom navrhni osnovu (bloky, minutáž, počet slajdov) a počkaj na schválenie
 2. **Predel bloku** – modrá plocha, „Blok N · obdobie · minúty“, názov bloku, jedna veta; každý blok začína predelom.
 3. **Obsahový slajd** – biela plocha, hore modrý pás na celú šírku (104 px, `surface-brand`) s bielym textom „Blok N · téma“ verzálkami, pod ním nadpis s jednou myšlienkou (max. 2 riadky), zoznam max. 5 položiek, voliteľne karta s číslom vpravo (mriežka 7+5).
    - **Žiadne klasické odrážky.** Zoznam je vždy vzor `LinkList`: zvislá linka 6 px vľavo (`brand-blue-ink`, neutrálny stĺpec `grey-9`), tučný začiatok (`slide-list-title`, 28 px) a pod ním vysvetlenie (`slide-list-text`, 24 px, `ink-muted`). Dôležité fakty (miesto, počet, historka) patria do vysvetlenia na slajde, nie len do poznámok.
-   - Lekcia alebo pointa: karta `brand-blue-tint` s tučným modrým začiatkom („Lekcia pre manažment: …“).
-4. **Kľúčové čísla** – max. 3 dlaždice; najviac jedno číslo červené, jedna dlaždica zvýraznená modrým tintom.
-5. **Časová os** – max. 6 bodov, pointa červená.
+   - Lekcia alebo pointa: vzor `LessonCard` – karta `brand-blue-tint` s tučným modrým začiatkom („Lekcia pre manažment: …“), najviac jedna na slajde, dole.
+4. **Kľúčové čísla** – max. 3 dlaždice; najviac jedno číslo červené, jedna dlaždica zvýraznená modrým tintom. Pri nákladoch alebo rozpočte vzor **Čísla s rozpisom** (`StatBreakdown`): tri dlaždice vľavo, rozpis so sumami v `LinkList` vpravo; súčty prepočítaj, obdobie (mesačne, ročne) vždy uveď.
+5. **Časová os** – vodorovná max. 6 bodov; pre 6 – 10 udalostí zvislá os s krúžkami (`TimelineVertical`), rok a text v jednom riadku. Pointa (zlom) červená, najviac jedna.
 6. **Citát a karty** – tvrdenie + citát v slovenských úvodzovkách „ “.
-7. **Záver** – „Ďakujem. Otázky?“, kontakt, weby SFZ.
+7. **Záver** – „Ďakujem. Otázky?“, kontakt (e‑mail, LinkedIn), weby SFZ a QR kód v bielej karte vpravo. QR kód vytvor generátorom SFZ (`tools/qr/` v repozitári, `npm run qr -- "odkaz"`): okrúhle body, logo SFZ v strede, tvar kruh. Odkaz daj ten, ktorý zadá používateľ; nikdy si ho nevymýšľaj. Kód pred použitím over dekóderom.
 
 Päta každého slajdu: vľavo názov prezentácie a číslo slajdu, vpravo logo SFZ. Vzory sú v repozitári v `templates/prezentacie/`.
 
@@ -40,7 +40,7 @@ Päta každého slajdu: vľavo názov prezentácie a číslo slajdu, vpravo logo
 
 - Slovenčina. 1. osoba množného čísla za SFZ („zaviedli sme“), publikum v 2. osobe.
 - Žiadny žargón: nie „implementácia“, „fulltime“, „rollout“ – ale „zaviedli“, „naplno“, „spustili“.
-- Čísla s medzerou ako oddeľovačom tisícov a desatinnou čiarkou (47 957 400 €, 1,76 mil. €), dátumy 21. 10. 2026.
+- Čísla s medzerou ako oddeľovačom tisícov a desatinnou čiarkou (47 957 400 €, 1,76 mil. €), dátumy 21. 10. 2026. Medzi číslom a jednotkou (10 399 €, 78 %, 9,57 TB), v skupinách tisícov (44 000) a v dátumoch (1. 7. 2012) je nedeliteľná medzera (U+00A0, `&nbsp;`), aby sa nerozdelili na konci riadku.
 - Každé číslo má zdroj a rok v päte alebo v poznámke; nikdy si čísla ani citáty nevymýšľaj – chýbajúce daj do [hranatých zátvoriek] a vypíš ich používateľovi.
 - Modrá je identita, červená len signál (max. raz na slajd). Žiadne emoji, žiadne gradienty.
 - Ku každému slajdu napíš poznámky pre rečníka (historky, mená na poďakovanie, otázky do publika).

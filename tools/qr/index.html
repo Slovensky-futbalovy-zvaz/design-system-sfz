@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>QR kód SFZ – generátor</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; }
+  body { font-family: var(--font-sans); background: var(--surface); color: var(--ink); -webkit-font-smoothing: antialiased; padding: max(var(--space-4), env(safe-area-inset-top)) max(var(--space-4), env(safe-area-inset-right)) max(var(--space-6), env(safe-area-inset-bottom)) max(var(--space-4), env(safe-area-inset-left)); }
+  main { max-width: 960px; margin: 0 auto; display: grid; gap: var(--space-5); }
+  header { display: flex; align-items: center; gap: var(--space-3); }
+  header img { height: 40px; width: auto; }
+  .muted { color: var(--ink-muted); }
+  .panel { background: var(--surface-raised); border-radius: var(--radius-lg); padding: var(--space-5); display: grid; gap: var(--space-4); }
+  label.field { display: grid; gap: var(--space-2); }
+  input[type="url"] { font: inherit; font-size: 17px; min-height: 44px; padding: 0 var(--space-3); border-radius: var(--radius-md); border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink); width: 100%; }
+  input[type="url"]:focus-visible, button:focus-visible, .seg input:focus-visible + span { outline: 2px solid var(--focus); outline-offset: 2px; }
+  fieldset { border: 0; padding: 0; display: grid; gap: var(--space-2); }
+  .seg { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .seg label { position: relative; }
+  .seg input { position: absolute; opacity: 0; inset: 0; }
+  .seg span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--space-4); border-radius: var(--radius-pill); background: var(--surface); border: 1px solid var(--border-strong); cursor: pointer; }
+  .seg input:checked + span { background: var(--brand-blue); color: var(--on-brand); border-color: var(--brand-blue); }
+  .check { display: flex; align-items: center; gap: var(--space-3); min-height: 44px; }
+  .check input { width: 22px; height: 22px; accent-color: var(--brand-blue); }
+  .nahlad { background: var(--surface); border-radius: var(--radius-lg); padding: var(--space-4); display: grid; place-items: center; min-height: 280px; }
+  .nahlad svg { width: min(100%, 420px); height: auto; }
+  .akcie { display: grid; gap: var(--space-3); grid-template-columns: 1fr; }
+  button { font: inherit; font-size: 17px; font-weight: 600; min-height: 44px; border-radius: var(--radius-md); border: 0; cursor: pointer; padding: 0 var(--space-4); }
+  .primary { background: var(--brand-blue); color: var(--on-brand); }
+  .secondary { background: var(--brand-blue-tint); color: var(--brand-blue-ink); }
+  .chyba { color: var(--danger-ink); }
+  ul.tipy { padding-left: var(--space-5); display: grid; gap: var(--space-1); }
+  @media (min-width: 768px) {
+    main { grid-template-columns: 1fr 1fr; align-items: start; }
+    header, .tipy-panel { grid-column: 1 / -1; }
+    .akcie { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="../../brand/logos/Loga-SFZ/sfz-D-farebne.svg" alt="Slovenský futbalový zväz">
+    <div><h1 class="title-1">QR kód SFZ</h1><p class="footnote muted">Okrúhle body, logo SFZ v strede, tvar kruh alebo štvorec</p></div>
+  </header>
+
+  <form class="panel" id="form" novalidate>
+    <label class="field">
+      <span class="headline">Odkaz</span>
+      <input type="url" id="odkaz" inputmode="url" autocomplete="url" placeholder="https://www.linkedin.com/in/meno/" value="https://futbalsfz.sk" aria-describedby="chyba">
+      <span id="chyba" class="footnote chyba" role="alert"></span>
+    </label>
+    <fieldset>
+      <legend class="headline">Tvar</legend>
+      <div class="seg">
+        <label><input type="radio" name="tvar" value="kruh" checked><span>Kruh</span></label>
+        <label><input type="radio" name="tvar" value="stvorec"><span>Štvorec</span></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend class="headline">Farba</legend>
+      <div class="seg">
+        <label><input type="radio" name="farba" value="modra" checked><span>Modrá SFZ</span></label>
+        <label><input type="radio" name="farba" value="cierna"><span>Čierna</span></label>
+      </div>
+    </fieldset>
+    <label class="check"><input type="checkbox" id="logo" checked><span>Logo SFZ v strede</span></label>
+  </form>
+
+  <section class="panel" aria-label="Náhľad a stiahnutie">
+    <div class="nahlad" id="nahlad" aria-live="polite"></div>
+    <div class="akcie">
+      <button type="button" class="primary" id="svg">Stiahnuť SVG</button>
+      <button type="button" class="secondary" id="png">Stiahnuť PNG (2048 px)</button>
+    </div>
+  </section>
+
+  <section class="panel tipy-panel">
+    <h2 class="title-3">Ako ho použiť</h2>
+    <ul class="tipy callout">
+      <li>Čím kratší odkaz, tým menej bodov a tým ľahšie sa kód číta. Dlhé odkazy skráťte.</li>
+      <li>Na slajde aspoň 280 px, v tlači aspoň 3 cm. Vždy na bielom podklade (na modrom slajde v bielej karte).</li>
+      <li>Pred použitím kód vždy naskenujte telefónom.</li>
+      <li>Logo sa vkladá bez úprav zo súboru SFZ; neprefarbujte ho ani nemeňte jeho tvar.</li>
+    </ul>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="logo-sfz-a.js"></script>
+<script src="sfz-qr.js"></script>
+<script>
+  (function () {
+    var $ = function (id) { return document.getElementById(id); };
+    var posledne = "";
+    function volby() {
+      return {
+        tvar: document.querySelector('input[name="tvar"]:checked').value,
+        farba: document.querySelector('input[name="farba"]:checked').value,
+        logo: $("logo").checked,
+        velkost: 1024
+      };
+    }
+    function kresli() {
+      var odkaz = $("odkaz").value.trim();
+      $("chyba").textContent = "";
+      if (!odkaz) { $("nahlad").innerHTML = ""; posledne = ""; $("chyba").textContent = "Zadajte odkaz."; return; }
+      try {
+        posledne = SFZQR.svg(odkaz, volby());
+        $("nahlad").innerHTML = posledne;
+      } catch (e) {
+        posledne = ""; $("nahlad").innerHTML = ""; $("chyba").textContent = e.message;
+      }
+    }
+    function nazov(pripona) {
+      var o = volby();
+      return "qr-sfz-" + o.tvar + (o.farba === "cierna" ? "-cierna" : "") + "." + pripona;
+    }
+    function stiahni(blob, meno) {
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob); a.download = meno;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    }
+    $("svg").addEventListener("click", function () {
+      if (posledne) stiahni(new Blob([posledne], { type: "image/svg+xml" }), nazov("svg"));
+    });
+    $("png").addEventListener("click", function () {
+      if (!posledne) return;
+      var img = new Image();
+      img.onload = function () {
+        var c = document.createElement("canvas"); c.width = 2048; c.height = 2048;
+        var ctx = c.getContext("2d"); ctx.drawImage(img, 0, 0, 2048, 2048);
+        c.toBlob(function (b) { stiahni(b, nazov("png")); }, "image/png");
+      };
+      img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(posledne);
+    });
+    $("form").addEventListener("input", kresli);
+    $("form").addEventListener("submit", function (e) { e.preventDefault(); });
+    kresli();
+  })();
+</script>
+</body>
+</html>

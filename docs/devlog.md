@@ -2,6 +2,20 @@
 
 Pracovný denník repozitára. Najnovší záznam hore. E‑maily, tokeny a ID sú v zápisoch maskované.
 
+## 2026-10-21 (večer) – v1.4.0
+
+**Čo sa urobilo**
+- Generátor QR kódu SFZ (`tools/qr/`): jeden renderer `sfz-qr.js` pre prehliadač aj Node (cez `vm`), logo A vkladané bez úprav z `brand/` (`npm run build:qr-logo`), tvar kruh/štvorec, modrá/čierna.
+- Vzory z prezentácie UKF Nitra: zvislá časová os, čísla s rozpisom, karta „Lekcia“, záver s QR kódom; šablóny 08 a 09.
+- Pravidlo nedeliteľnej medzery do brand booku a skillu.
+
+**Čo treba vedieť**
+- Čitateľnosť QR overená dekóderom ZXing (zxing-cpp) pri 150 – 1024 px; dlhé odkazy (~100 znakov) pri malej veľkosti a natočení zlyhávajú občas → v dokumentácii odporúčanie skracovať odkazy, min. 280 px na slajde / 3 cm v tlači. OpenCV QRCodeDetector okrúhle body nečíta (nie je cieľový dekodér).
+- Webový nástroj načítava `qrcode-generator` z cdnjs (pinovaná 1.4.4); bez internetu funguje len `npm run qr`.
+
+**Čo nefungovalo a prečo**
+- Pri polomere bodu 0,43 modulu zlyhávali dlhé odkazy častejšie; zväčšené na 0,46.
+
 ## 2026-10-21
 
 **Čo sa urobilo**

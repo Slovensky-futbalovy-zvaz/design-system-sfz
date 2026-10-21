@@ -22,7 +22,8 @@ Prehliadateľná verzia (brand book so živými náhľadmi): artefakt **SFZ Desi
 | `brand/logos/` | 16 značiek SFZ × farebná/čierna/biela, SVG + PNG; README každej skupiny má ochranné zóny |
 | `docs/brand-book.md` | Pravidlá farieb, typografie, rozloženia, prístupnosti a tónu textu |
 | `docs/prezentacie/` | Pravidlá pre slajdy 1920×1080 (titul, predel, obsah, čísla, časová os, logá) |
-| `templates/prezentacie/` | 7 hotových HTML šablón slajdov s logami SFZ, prehľad `index.html` |
+| `templates/prezentacie/` | 9 hotových HTML šablón slajdov s logami SFZ, prehľad `index.html` |
+| `tools/qr/` | Generátor QR kódu SFZ (okrúhle body, logo v strede, kruh alebo štvorec) – `index.html` v prehliadači alebo `npm run qr` |
 | `docs/decisions/` | Architektonické rozhodnutia (ADR) |
 | `docs/artefakt/` | Náhľady a mapovanie na artefakt SFZ Design System na claude.ai |
 | `docs/skills/sfz-prezentacia/` | Skill pre Claude na tvorbu prezentácií SFZ |
@@ -43,7 +44,7 @@ Prehliadateľná verzia (brand book so živými náhľadmi): artefakt **SFZ Desi
 ### Varianta A – balík z GitHubu (odporúčané)
 
 ```bash
-npm install github:Slovensky-futbalovy-zvaz/design-system-sfz#v1.3.1
+npm install github:Slovensky-futbalovy-zvaz/design-system-sfz#v1.4.0
 ```
 
 ```js
@@ -98,7 +99,7 @@ Skopírujte potrebné súbory z `brand/logos/<skupina>/` do `public/brand/` a vk
 
 ![Šablóny slajdov](templates/prezentacie/nahlady/01-titul.png)
 
-V `templates/prezentacie/` je 7 šablón slajdov 1920×1080 (titul, predel, obsah, čísla, časová os, citát, záver). Otvorte `index.html` v prehliadači, vyberte šablónu, nahraďte texty v [hranatých zátvorkách] a uložte do PDF cez Tlačiť → Uložiť ako PDF.
+V `templates/prezentacie/` je 9 šablón slajdov 1920×1080 (titul, predel, obsah s lekciou, čísla, časová os, citát, záver s QR kódom, zvislá časová os, čísla s rozpisom). Otvorte `index.html` v prehliadači, vyberte šablónu, nahraďte texty v [hranatých zátvorkách] a uložte do PDF cez Tlačiť → Uložiť ako PDF.
 
 V Claude sa prezentácie tvoria v Claude Slides s artefaktom SFZ Design System. Skill [`sfz-prezentacia`](docs/skills/sfz-prezentacia/SKILL.md) zabezpečí, že Claude systém použije automaticky. Prenos artefaktu a skillu do iného konta (napr. firemného) popisuje [`docs/prenos-do-firemneho-konta.md`](docs/prenos-do-firemneho-konta.md).
 
@@ -110,6 +111,8 @@ npm run build:tokens   # tokens.json → tokens.css
 npm run typecheck      # TypeScript
 npm test               # Vitest: tokeny, kontrast, render a správanie komponentov
 npm run check          # všetko naraz
+npm run qr -- "https://futbalsfz.sk" --tvar kruh -o qr.svg   # QR kód SFZ (alebo tools/qr/index.html)
+npm run build:qr-logo  # po zmene loga A: obnoví tools/qr/logo-sfz-a.js
 ```
 
 Zmenu tokenov robte **len v `tokens/tokens.json`**, potom spustite `npm run build:tokens` a commitnite oba súbory. Test zlyhá, ak `tokens.css` nie je aktuálny alebo ak niektorá farba nesplní kontrast.

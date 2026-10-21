@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="sk" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Čísla s rozpisom – šablóna slajdu SFZ</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<link rel="stylesheet" href="slide.css">
+</head>
+<body>
+<!-- Čísla s rozpisom: tri dlaždice vľavo (prvá zvýraznená), rozpis v zozname s linkou vpravo. Zdroj a obdobie v päte. -->
+<div class="stage">
+<section class="slide slide--content">
+  <div class="band"><p class="slide-band">Záver · [téma]</p></div>
+  <h2 class="slide-h1" style="max-width:1600px">[Nadpis: koľko to stojí a za čo]</h2>
+  <div class="breakdown">
+    <div class="tiles">
+      <div class="card card--highlight"><p class="slide-stat stat tn">[10 399 €]</p><p class="slide-list-text muted">[spolu, mesačne]</p></div>
+      <div class="card"><p class="slide-stat stat tn">[5 000 €]</p><p class="slide-list-text muted">[časť 1]</p></div>
+      <div class="card"><p class="slide-stat stat tn">[5 399 €]</p><p class="slide-list-text muted">[časť 2]</p></div>
+    </div>
+    <ul class="linklist">
+      <li><span class="slide-list-title">[Položka] · <span class="amt">[1 234 €]</span></span><span class="slide-list-text d">[z čoho sa skladá: časti a sumy]</span></li>
+      <li><span class="slide-list-title">[Položka] · <span class="amt">[567 €]</span></span><span class="slide-list-text d">[vysvetlenie]</span></li>
+      <li><span class="slide-list-title">[Položka] · <span class="amt">[89 €]</span></span><span class="slide-list-text d">[vysvetlenie]</span></li>
+      <li class="neutral"><span class="slide-list-title">[Súvisiaci údaj]</span><span class="slide-list-text d">[vysvetlenie]</span></li>
+    </ul>
+  </div>
+  <div class="foot"><span class="slide-caption muted">[Názov prezentácie] · 9 · Zdroj: [zdroj, rok]</span><img src="../../brand/logos/Loga-SFZ/sfz-D-farebne.svg" alt="Slovenský futbalový zväz"></div>
+</section>
+</div>
+<script>
+  // Zmenší slajd 1920×1080 tak, aby sa zmestil do okna (mobil aj projektor).
+  function fit() { document.documentElement.style.setProperty("--scale", Math.min(innerWidth / 1920, innerHeight / 1080)); }
+  addEventListener("resize", fit); fit();
+</script>
+</body>
+</html>

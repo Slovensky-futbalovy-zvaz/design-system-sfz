@@ -6,8 +6,8 @@ const dir = join(process.cwd(), "templates/prezentacie");
 const files = readdirSync(dir).filter((f) => f.endsWith(".html"));
 
 describe("šablóny slajdov", () => {
-  it("obsahujú 7 šablón a prehľad", () => {
-    expect(files.filter((f) => /^\d\d-/.test(f))).toHaveLength(7);
+  it("obsahujú 9 šablón a prehľad", () => {
+    expect(files.filter((f) => /^\d\d-/.test(f))).toHaveLength(9);
     expect(files).toContain("index.html");
   });
   for (const f of files) {

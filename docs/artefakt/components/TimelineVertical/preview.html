@@ -1,0 +1,25 @@
+<!-- @dsCard group="Slajdy" height=420 width=1920 subtitle="Zvislá časová os s krúžkami" -->
+<style>
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--font-sans);color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased}
+.muted{color:var(--ink-muted)}
+.tn{font-variant-numeric:tabular-nums}
+</style>
+<style>
+.vt{position:relative;list-style:none;padding:48px 96px;display:grid;gap:24px}
+.vt::before{content:"";position:absolute;left:111px;top:64px;bottom:64px;width:2px;background:var(--on-brand-muted)}
+.vt li{position:relative;display:grid;grid-template-columns:32px 180px 1fr;gap:28px;align-items:center}
+.dot{width:32px;height:32px;border-radius:var(--radius-pill);background:var(--brand-blue);border:8px solid var(--brand-blue-tint)}
+.y{font-size:30px;line-height:1.2;font-weight:700;color:var(--brand-blue-ink)}
+.t{font-size:26px;line-height:1.35;font-weight:500}
+.key .dot{background:var(--brand-red);border-color:var(--brand-red-tint)}
+.key .y,.key .t{color:var(--brand-red);font-weight:700}
+</style>
+<ol class="vt">
+<li><span class="dot"></span><span class="y tn">2012</span><span class="t">ISSF: registrácie, transfery, súťaže, fakturácia, komisie <span class="muted">· kluby, zväzy, rozhodcovia</span></span></li>
+<li><span class="dot"></span><span class="y tn">2013</span><span class="t">futbalnet.sk V1 – verejný výsledkový servis <span class="muted">· fanúšikovia, rodičia, médiá</span></span></li>
+<li class="key"><span class="dot"></span><span class="y">Zlom</span><span class="t">One big think – zmena stratégie digitalizácie: služby pre ľudí</span></li>
+<li><span class="dot"></span><span class="y tn">2014 – 15</span><span class="t">Štart sportnet.online; futbalnet.sk V2; futbalnet.shop <span class="muted">· kluby s mládežou, partneri</span></span></li>
+<li><span class="dot"></span><span class="y tn">2018</span><span class="t">Dajme spolu gól – škôlky a školy <span class="muted">· deti, učitelia, rodičia</span></span></li>
+</ol>
+<script>/* statický vzor */</script>

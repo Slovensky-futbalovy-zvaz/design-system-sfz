@@ -2,6 +2,20 @@
 
 Formát podľa [Keep a Changelog](https://keepachangelog.com/sk/1.1.0/), verzie podľa [SemVer](https://semver.org/lang/sk/).
 
+## [1.4.0] – 2026-10-21
+
+### Pridané
+- Generátor QR kódu SFZ `tools/qr/`: okrúhle body, zaoblené rohové značky, logo SFZ (A) v strede, tvar kruh (s dekoratívnym vzorom a obrysom) alebo štvorec, farba modrá alebo čierna. Webový nástroj `tools/qr/index.html` (mobile first, SVG aj PNG 2048 px) a príkaz `npm run qr`. Úroveň korekcie H; čitateľnosť overená dekóderom ZXing.
+- Vzory slajdov `TimelineVertical` (zvislá časová os s krúžkami, šablóna `08-casova-os-zvisla.html`), `StatBreakdown` (čísla s rozpisom, `09-cisla-rozpis.html`), `LessonCard` (karta „Lekcia“) a `QrCode` – dokumentácia v `docs/prezentacie/`, náhľady v `docs/artefakt/components/`.
+- Pravidlo nedeliteľnej medzery v číslach, jednotkách a dátumoch (brand book, skill `sfz-prezentacia`).
+- Testy generátora QR (zhoda loga so súborom SFZ, determinizmus, varianty).
+- Závislosť na vývoj `qrcode-generator` 1.4.4 (MIT).
+
+### Zmenené
+- Šablóna `03-obsah.html` má kartu „Lekcia“ a tri položky zoznamu; `07-zaver.html` má riadok LinkedIn a QR kód v bielej karte.
+- Prehľad šablón: 9 šablón a odkaz na generátor QR; náhľady pregenerované.
+- Skill `sfz-prezentacia`: zvislá os, čísla s rozpisom, lekcia, záver s QR kódom.
+
 ## [1.3.1] – 2026-10-21
 
 ### Pridané

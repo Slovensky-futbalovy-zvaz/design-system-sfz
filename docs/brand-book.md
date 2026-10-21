@@ -7,7 +7,7 @@ Design systém Slovenského futbalového zväzu pre prezentácie, dokumenty a we
 - **Jedna farba vládne.** `brand-blue` je identita; na slajde je buď celoplošná (titul, sekcia, záver), alebo sa objaví iba v jednom prvku (číslo, linka, chip, primárne tlačidlo). Nikdy obe naraz.
 - **Červená je signál, nie dekorácia.** `brand-red` = `danger`. Najviac raz na obrazovku: zvýraznené číslo, neuhradená faktúra, nevratná akcia. Celoplošná červená je zakázaná.
 - **Svetlo je predvolené.** Bežné obrazovky stoja na `surface`, karty na `surface-raised`. Tmavá téma je hlboká modročierna, nie invertovaná svetlá; aplikácie ju zapínajú podľa systému (`prefers-color-scheme`) a atribútom `data-theme="dark"`.
-- **Text je krátky a ľudský.** Slovenčina, 1. osoba množného čísla pri SFZ („zaviedli sme“), 2. osoba pri používateľovi („uvidíte“). Žiadne „implementácia“, „fulltime“, „rollout“. Tlačidlá sú slovesá („Uložiť“, „Odoslať podanie“). Čísla s medzerou ako oddeľovačom tisícov (47 957 400 €), desatinná čiarka, dátumy 21. 10. 2026.
+- **Text je krátky a ľudský.** Slovenčina, 1. osoba množného čísla pri SFZ („zaviedli sme“), 2. osoba pri používateľovi („uvidíte“). Žiadne „implementácia“, „fulltime“, „rollout“. Tlačidlá sú slovesá („Uložiť“, „Odoslať podanie“). Čísla s medzerou ako oddeľovačom tisícov (47 957 400 €), desatinná čiarka, dátumy 21. 10. 2026. Medzi číslom a jednotkou (10 399 €, 78 %, 9,57 TB), v skupinách tisícov (44 000) a v dátumoch (1. 7. 2012) je nedeliteľná medzera (U+00A0, `&nbsp;`), aby sa nerozdelili na konci riadku.
 - **Žiadne emoji, žiadne klipartové ikony.** Na webe Lucide ikony z bundla (`Icon`), na Macu SF Symbols.
 
 ## Farby
@@ -76,6 +76,10 @@ Pravidlá: jedno `primary` tlačidlo na obrazovku; stav vždy slovom + farbou; p
 - Vždy použite súbor zo systému; logo nikdy nekreslite ani neprefarbujte. Farebný variant iba na bielej alebo `surface-raised`; na modrej, fotografii a v tmavej téme biely; čierny do čiernobielej tlače. Ochranné zóny a farby sú v README každej skupiny.
 - Ročníkové varianty (Futbalista roka, Grassroots Gala) treba každý rok doplniť z aktuálneho manuálu.
 
+## QR kód
+
+QR kód SFZ má okrúhle body, zaoblené rohové značky a v strede logo SFZ (variant A) na bielom kruhu; tvar kruh alebo štvorec, farba `brand-blue` alebo `ink`, pozadie vždy biele. Odkaz si zadá každý sám v generátore `tools/qr/index.html` alebo cez `npm run qr`. Na modrej ploche len v bielej karte, na slajde aspoň 280 px, v tlači aspoň 3 cm; dlhé odkazy skráťte a kód pred použitím naskenujte.
+
 ## Komponenty pre slajdy
 
-HTML vzory 1920×1080 (nie React): `SlideTitle`, `SlideSection`, `SlideContent` (s modrým pásom hore), `LinkList`, `StatTile`, `Timeline`, `LogoLockup`. Na slajdoch nepoužívame klasické odrážky: zoznam je vždy `LinkList` – zvislá linka, tučný začiatok (`slide-list-title`) a vysvetlenie (`slide-list-text`). Karta a chip na slajde sú webové `Card` a `Chip` v mierke ×1,6 (rádius `radius-lg`, odstup `space-7`, text `slide-body`); pravidlá sú v ich README.
+HTML vzory 1920×1080 (nie React): `SlideTitle`, `SlideSection`, `SlideContent` (s modrým pásom hore), `LinkList`, `LessonCard`, `StatTile`, `StatBreakdown`, `Timeline`, `TimelineVertical`, `QrCode`, `LogoLockup`. Na slajdoch nepoužívame klasické odrážky: zoznam je vždy `LinkList` – zvislá linka, tučný začiatok (`slide-list-title`) a vysvetlenie (`slide-list-text`). Karta a chip na slajde sú webové `Card` a `Chip` v mierke ×1,6 (rádius `radius-lg`, odstup `space-7`, text `slide-body`); pravidlá sú v ich README.

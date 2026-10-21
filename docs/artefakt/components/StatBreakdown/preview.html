@@ -1,0 +1,32 @@
+<!-- @dsCard group="Slajdy" height=520 width=1920 subtitle="Čísla s rozpisom" -->
+<style>
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--font-sans);color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased}
+.muted{color:var(--ink-muted)}
+.tn{font-variant-numeric:tabular-nums}
+</style>
+<style>
+.br{padding:48px 96px;display:grid;grid-template-columns:5fr 7fr;gap:48px}
+.tiles{display:grid;gap:16px;align-content:start}
+.tile{background:var(--surface-raised);border-radius:var(--radius-lg);padding:28px 32px;display:grid;gap:4px}
+.tile.hl{background:var(--brand-blue-tint)}
+.tile .n{font-size:64px;line-height:1;font-weight:700;letter-spacing:-0.03em;color:var(--brand-blue-ink)}
+.ll{display:grid;gap:20px;align-content:start}
+.li{border-left:6px solid var(--brand-blue-ink);padding-left:24px;display:grid;gap:4px}
+.li.neutral{border-left-color:var(--grey-9)}
+.amt{color:var(--brand-blue-ink)}
+</style>
+<div class="br">
+  <div class="tiles">
+    <div class="tile hl"><div class="n tn">10 399 €</div><div class="slide-list-text muted">mesačne za infraštruktúru spolu</div></div>
+    <div class="tile"><div class="n tn">5 000 €</div><div class="slide-list-text muted">ISSF</div></div>
+    <div class="tile"><div class="n tn">5 399 €</div><div class="slide-list-text muted">sportnet.online</div></div>
+  </div>
+  <div class="ll">
+    <div class="li"><div class="slide-list-title">Servery bart.sk · <span class="amt">3 654 €</span></div><div class="slide-list-text muted">portál 720 €, API 384 €, video 2 550 €</div></div>
+    <div class="li"><div class="slide-list-title">Médiá · <span class="amt">475 €</span></div><div class="slide-list-text muted">Mediamanager 450 €, Cloudflare 25 €</div></div>
+    <div class="li"><div class="slide-list-title">MongoDB Atlas · <span class="amt">820 €</span></div><div class="slide-list-text muted">všetky databázy a vyhľadávanie</div></div>
+    <div class="li neutral"><div class="slide-list-title">9,57 TB prenosu za 30 dní</div><div class="slide-list-text muted">9,07 TB z toho obslúži cache</div></div>
+  </div>
+</div>
+<script>/* statický vzor */</script>
