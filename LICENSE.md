@@ -19,4 +19,4 @@ Ikony v `components/src/icons.tsx` pochádzajú z projektu [Lucide](https://luci
 
 ## Kontakt
 
-Žiadosti o súhlas posielajte na Slovenský futbalový zväz, [futbalsfz.sk](https://futbalsfz.sk).
+Žiadosti o súhlas posielajte na adresu [office@futbalsfz.sk](mailto:office@futbalsfz.sk) (Slovenský futbalový zväz, [futbalsfz.sk](https://futbalsfz.sk)).

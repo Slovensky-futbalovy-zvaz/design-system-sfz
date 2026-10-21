@@ -2,10 +2,15 @@
 
 Formát podľa [Keep a Changelog](https://keepachangelog.com/sk/1.1.0/), verzie podľa [SemVer](https://semver.org/lang/sk/).
 
-## [Nevydané]
+## [1.3.1] – 2026-10-21
+
+### Pridané
+- Podmienky použitia `LICENSE.md`: zamestnanci a zmluvní partneri SFZ môžu obsah používať na prácu pre SFZ, ostatní len s predchádzajúcim písomným súhlasom SFZ (žiadosti na office@futbalsfz.sk); logá ostávajú ochrannými známkami.
+- Pracovný denník `docs/devlog.md`.
 
 ### Zmenené
-- Repozitár je verejný. Nové podmienky použitia v `LICENSE.md`: zamestnanci a zmluvní partneri SFZ môžu obsah používať na prácu pre SFZ, ostatní len s predchádzajúcim písomným súhlasom SFZ; logá ostávajú ochrannými známkami. README, `package.json` a návod na prenos upravené.
+- Repozitár je verejný: README (licencie, inštalácia z `#v1.3.1`), `package.json` (`SEE LICENSE IN LICENSE.md`) a návod na prenos do firemného konta zosúladené.
+- `NEXT.md`: kontrola podmienok použitia a kandidáti na vzory slajdov v1.4.0.
 
 ## [1.3.0] – 2026-10-21
 

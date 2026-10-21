@@ -43,7 +43,7 @@ Prehliadateľná verzia (brand book so živými náhľadmi): artefakt **SFZ Desi
 ### Varianta A – balík z GitHubu (odporúčané)
 
 ```bash
-npm install github:Slovensky-futbalovy-zvaz/design-system-sfz#v1.3.0
+npm install github:Slovensky-futbalovy-zvaz/design-system-sfz#v1.3.1
 ```
 
 ```js
@@ -118,6 +118,6 @@ Pravidlá práce v repozitári sú v [`CLAUDE.md`](CLAUDE.md), história zmien v
 
 ## Licencie
 
-- Repozitár je verejne viditeľný, ale nie je voľne použiteľný: © Slovenský futbalový zväz, všetky práva vyhradené. Zamestnanci a zmluvní partneri SFZ ho môžu používať na prácu pre SFZ; ostatní len s predchádzajúcim písomným súhlasom SFZ. Podrobnosti v [`LICENSE.md`](LICENSE.md).
+- Repozitár je verejne viditeľný, ale nie je voľne použiteľný: © Slovenský futbalový zväz, všetky práva vyhradené. Zamestnanci a zmluvní partneri SFZ ho môžu používať na prácu pre SFZ; ostatní len s predchádzajúcim písomným súhlasom SFZ (žiadosti na office@futbalsfz.sk). Podrobnosti v [`LICENSE.md`](LICENSE.md).
 - Logá: ochranné známky SFZ, použitie podľa SFZ Design Manual 2024‑01.
 - Ikony: [Lucide](https://lucide.dev) (ISC licencia), vložené ako SVG cesty v `components/src/icons.tsx`.
