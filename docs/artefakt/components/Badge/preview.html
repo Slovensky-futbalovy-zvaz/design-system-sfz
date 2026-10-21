@@ -1,0 +1,9 @@
+<!-- @dsCard group="Obsah" height=80 subtitle="Stavové štítky" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+return h("div",{className:"row"},h(S.Badge,null,"Koncept"),h(S.Badge,{tone:"info"},"Odoslané"),h(S.Badge,{tone:"success",dot:true},"Schválené"),h(S.Badge,{tone:"warning",dot:true},"Čaká na úhradu"),h(S.Badge,{tone:"danger",dot:true},"Zamietnuté"),h(S.Badge,{tone:"brand"},"Nové"));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

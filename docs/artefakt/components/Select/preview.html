@@ -1,0 +1,11 @@
+<!-- @dsCard group="Formuláre" height=170 subtitle="Výber z možností" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+return h("div",{className:"col"},
+ h(S.Select,{label:"Súťaž",placeholder:"Vyberte súťaž",options:[{value:"nl",label:"Niké liga"},{value:"2l",label:"II. liga"},{value:"3l",label:"III. liga"}]}),
+ h(S.Select,{label:"Sezóna",options:[{value:"25",label:"2025/2026"},{value:"24",label:"2024/2025"}],error:"Vyberte sezónu."}));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

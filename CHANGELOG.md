@@ -2,6 +2,14 @@
 
 Formát podľa [Keep a Changelog](https://keepachangelog.com/sk/1.1.0/), verzie podľa [SemVer](https://semver.org/lang/sk/).
 
+## [1.2.0] – 2026-10-21
+
+### Pridané
+- Skill pre Claude `docs/skills/sfz-prezentacia/SKILL.md`: prezentácie SFZ v Claude Slides so SFZ Design Systemom.
+- Zdroje artefaktu `docs/artefakt/`: 32 živých náhľadov komponentov a obálky (odkazy na logá prepísané na `brand/logos/`) a mapovanie súborov na artefakt.
+- Návod `docs/prenos-do-firemneho-konta.md`: obnova artefaktu a skillu v inom konte Claude z tohto repozitára.
+- Test zdrojov artefaktu (úplnosť náhľadov, platné odkazy na logá, hlavička skillu).
+
 ## [1.1.0] – 2026-10-21
 
 ### Pridané

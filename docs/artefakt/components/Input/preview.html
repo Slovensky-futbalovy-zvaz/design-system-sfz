@@ -1,0 +1,12 @@
+<!-- @dsCard group="Formuláre" height=230 subtitle="Textový vstup so stavmi" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+return h("div",{className:"col"},
+ h(S.Input,{label:"E‑mailová adresa",placeholder:"meno@klub.sk",type:"email",required:true,hint:"Použijeme ju na prihlásenie."}),
+ h(S.Input,{label:"Hľadať hráča",icon:"search",placeholder:"Meno alebo registračné číslo"}),
+ h(S.Input,{label:"Registračné číslo",defaultValue:"12345",error:"Toto číslo už existuje."}));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

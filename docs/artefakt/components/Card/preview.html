@@ -1,0 +1,12 @@
+<!-- @dsCard group="Obsah" height=230 subtitle="Karty: raised, highlight, outline" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+return h("div",{style:{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))",gap:12}},
+ h(S.Card,{title:"Najbližší zápas",action:h(S.Badge,{tone:"info"},"Sobota")},h("p",{style:{margin:0}},"MŠK Žilina – Spartak Trnava, 17:00")),
+ h(S.Card,{variant:"highlight",title:"Zberná faktúra"},h("p",{style:{margin:0,fontSize:28,fontWeight:700,fontVariantNumeric:"tabular-nums"}},"1 240,50 €"),h("p",{style:{margin:0,color:"var(--ink-muted)"}},"splatná do 15. 11.")),
+ h(S.Card,{variant:"outline",title:"Tréner",footer:h(S.Button,{size:"sm",variant:"secondary"},"Zobraziť profil")},h("p",{style:{margin:0}},"Licencia UEFA A, platná do 2027")));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

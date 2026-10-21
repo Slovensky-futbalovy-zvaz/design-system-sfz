@@ -1,0 +1,10 @@
+<!-- @dsCard group="Prekrytia" height=120 subtitle="Bočný panel (menu na mobile)" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+const [o,setO]=React.useState(false);
+return h("div",null,h(S.Button,{variant:"secondary",icon:"menu",onClick:()=>setO(true)},"Otvoriť menu"),h(S.Drawer,{open:o,onClose:()=>setO(false),title:"Menu"},h("div",{className:"col"},["Prehľad","Zápasy","Členovia","Faktúry","Nastavenia"].map(x=>h(S.Button,{key:x,variant:"tertiary",block:true,style:{justifyContent:"flex-start"}},x)))));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

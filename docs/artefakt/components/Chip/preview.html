@@ -1,0 +1,9 @@
+<!-- @dsCard group="Obsah" height=80 subtitle="Filtre a vybrané položky" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+return h("div",{className:"row"},h(S.Chip,{selected:true,icon:"filter"},"Muži"),h(S.Chip,null,"Ženy"),h(S.Chip,null,"Mládež"),h(S.Chip,{onRemove:()=>{}},"MŠK Žilina"),h(S.Chip,{onRemove:()=>{}},"Sezóna 2025/26"));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

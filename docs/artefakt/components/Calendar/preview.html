@@ -1,0 +1,10 @@
+<!-- @dsCard group="Dáta" height=400 subtitle="Mesačný kalendár s udalosťami" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+const [v,setV]=React.useState("2026-10-24");
+return h(S.Calendar,{value:v,onChange:setV,month:"2026-10",events:[{date:"2026-10-24",tone:"brand"},{date:"2026-10-24",tone:"success"},{date:"2026-10-31",tone:"danger"},{date:"2026-10-10",tone:"warning"}]});}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

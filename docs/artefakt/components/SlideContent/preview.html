@@ -1,0 +1,33 @@
+<!-- @dsCard group="Slajdy" height=320 width=1920 subtitle="Bežný slajd s obsahom" -->
+<style>
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--font-sans);color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased}
+.slide{width:1920px;height:1080px;position:relative;overflow:hidden;padding:64px 96px}
+.slide.blue{background:var(--surface-brand);color:var(--on-brand)}
+.foot{position:absolute;left:96px;right:96px;bottom:48px;display:flex;justify-content:space-between;align-items:center}
+.foot img{height:56px}
+.eyebrow{text-transform:uppercase;color:var(--brand-blue)}
+.blue .eyebrow{color:var(--on-brand-muted)}
+.muted{color:var(--ink-muted)}
+.blue .muted{color:var(--on-brand-muted)}
+.tn{font-variant-numeric:tabular-nums}
+</style>
+<div class="slide">
+  <div class="slide-eyebrow eyebrow" style="margin-bottom:24px">Blok 1 · Stav v roku 2010</div>
+  <h1 class="slide-h1" style="max-width:1500px;text-wrap:balance">„44 futbalov“ – každý zväz si viedol agendu po svojom</h1>
+  <div style="display:grid;grid-template-columns:7fr 5fr;gap:48px;margin-top:64px">
+    <ul class="slide-body" style="padding-left:40px;display:grid;gap:16px">
+      <li>46 organizácií: SFZ, ÚLK, futsal, 4 regionálne a 38 oblastných zväzov</li>
+      <li>Papierové zápisy poštou, oficiálne výsledky vo štvrtok</li>
+      <li>Šeky, rady na preukazy, e‑mail nebol oficiálne uznaný</li>
+      <li>Finančná disciplína klubov takmer nulová</li>
+    </ul>
+    <div style="background:var(--surface-raised);border-radius:var(--radius-lg);padding:48px;display:flex;flex-direction:column;justify-content:center;gap:16px">
+      <div class="slide-stat tn" style="color:var(--brand-blue)">46</div>
+      <div class="slide-h2">organizácií riadilo futbal</div>
+      <div class="slide-caption muted">42 z nich mimo Bratislavy</div>
+    </div>
+  </div>
+  <div class="foot"><span class="slide-caption muted">Digitalizácia slovenského futbalu · 4</span><img src="../../../../brand/logos/Loga-SFZ/sfz-D-farebne.svg" alt=""></div>
+</div>
+<script>/* statický vzor */</script>

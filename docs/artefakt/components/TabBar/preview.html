@@ -1,0 +1,10 @@
+<!-- @dsCard group="Navigácia" height=120 width=390 subtitle="Mobilná spodná navigácia (<768 px)" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+const [v,setV]=React.useState("z");
+return h("div",{style:{height:80}},h("div",null,h(S.TabBar,{value:v,onChange:setV,items:[{id:"d",label:"Prehľad",icon:"home"},{id:"z",label:"Zápasy",icon:"trophy",badge:3},{id:"k",label:"Kalendár",icon:"calendar"},{id:"c",label:"Členovia",icon:"users"},{id:"p",label:"Profil",icon:"user"}]})));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

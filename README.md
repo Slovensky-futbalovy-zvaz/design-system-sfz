@@ -24,6 +24,9 @@ Prehliadateľná verzia (brand book so živými náhľadmi): artefakt **SFZ Desi
 | `docs/prezentacie/` | Pravidlá pre slajdy 1920×1080 (titul, predel, obsah, čísla, časová os, logá) |
 | `templates/prezentacie/` | 7 hotových HTML šablón slajdov s logami SFZ, prehľad `index.html` |
 | `docs/decisions/` | Architektonické rozhodnutia (ADR) |
+| `docs/artefakt/` | Náhľady a mapovanie na artefakt SFZ Design System na claude.ai |
+| `docs/skills/sfz-prezentacia/` | Skill pre Claude na tvorbu prezentácií SFZ |
+| `docs/prenos-do-firemneho-konta.md` | Ako postaviť artefakt a skill v inom konte Claude |
 
 ## Komponenty
 
@@ -97,7 +100,7 @@ Skopírujte potrebné súbory z `brand/logos/<skupina>/` do `public/brand/` a vk
 
 V `templates/prezentacie/` je 7 šablón slajdov 1920×1080 (titul, predel, obsah, čísla, časová os, citát, záver). Otvorte `index.html` v prehliadači, vyberte šablónu, nahraďte texty v [hranatých zátvorkách] a uložte do PDF cez Tlačiť → Uložiť ako PDF.
 
-V Claude sa prezentácie tvoria v Claude Slides s artefaktom SFZ Design System. Skill `sfz-prezentacia` zabezpečí, že Claude systém použije automaticky.
+V Claude sa prezentácie tvoria v Claude Slides s artefaktom SFZ Design System. Skill [`sfz-prezentacia`](docs/skills/sfz-prezentacia/SKILL.md) zabezpečí, že Claude systém použije automaticky. Prenos artefaktu a skillu do iného konta (napr. firemného) popisuje [`docs/prenos-do-firemneho-konta.md`](docs/prenos-do-firemneho-konta.md).
 
 ## Vývoj
 

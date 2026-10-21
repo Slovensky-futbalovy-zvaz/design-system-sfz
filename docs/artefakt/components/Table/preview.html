@@ -1,0 +1,11 @@
+<!-- @dsCard group="Dáta" height=260 subtitle="Jednoduchá tabuľka; na mobile sa skladá do kariet" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+const rows=[{id:1,klub:"MŠK Žilina",z:12,b:28,f:"Uhradené"},{id:2,klub:"Spartak Trnava",z:12,b:25,f:"Uhradené"},{id:3,klub:"ŠK Slovan Bratislava",z:11,b:24,f:"Čaká"},{id:4,klub:"FC Košice",z:12,b:19,f:"Po splatnosti"}];
+const tone={"Uhradené":"success","Čaká":"warning","Po splatnosti":"danger"};
+return h(S.Table,{caption:"Tabuľka súťaže",rowKey:r=>r.id,rows,columns:[{key:"klub",header:"Klub"},{key:"z",header:"Zápasy",align:"right",hideOnMobile:true},{key:"b",header:"Body",align:"right"},{key:"f",header:"Faktúra",render:r=>h(S.Badge,{tone:tone[r.f],dot:true},r.f)}]});}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

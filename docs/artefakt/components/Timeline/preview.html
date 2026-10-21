@@ -1,0 +1,34 @@
+<!-- @dsCard group="Slajdy" height=260 width=1920 subtitle="Vodorovná časová os" -->
+<style>
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--font-sans);color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased}
+.slide{width:1920px;height:1080px;position:relative;overflow:hidden;padding:64px 96px}
+.slide.blue{background:var(--surface-brand);color:var(--on-brand)}
+.foot{position:absolute;left:96px;right:96px;bottom:48px;display:flex;justify-content:space-between;align-items:center}
+.foot img{height:56px}
+.eyebrow{text-transform:uppercase;color:var(--brand-blue)}
+.blue .eyebrow{color:var(--on-brand-muted)}
+.muted{color:var(--ink-muted)}
+.blue .muted{color:var(--on-brand-muted)}
+.tn{font-variant-numeric:tabular-nums}
+</style>
+<style>
+.tl{position:relative;padding:48px 96px 24px}
+.tl .line{position:absolute;left:96px;right:96px;top:112px;height:2px;background:var(--hairline)}
+.tl ol{list-style:none;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:32px}
+.tl li{position:relative;padding-top:40px}
+.tl li::before{content:"";position:absolute;top:52px;left:0;width:24px;height:24px;border-radius:var(--radius-pill);background:var(--brand-blue)}
+.tl li.red::before{background:var(--brand-red)}
+.tl .y{color:var(--brand-blue);font-weight:700}
+.tl li.red .y{color:var(--brand-red)}
+</style>
+<div class="tl"><div class="line"></div>
+<ol>
+<li><div class="slide-h2 y tn">2010</div><div class="slide-caption" style="margin-top:8px">Nový prezident, analýza „44 futbalov“</div></li>
+<li><div class="slide-h2 y tn">2011</div><div class="slide-caption" style="margin-top:8px">Tender, 28 ponúk; import 250 000 hráčov</div></li>
+<li class="red"><div class="slide-h2 y tn">2012</div><div class="slide-caption" style="margin-top:8px">1. 7. ostrá prevádzka ISSF</div></li>
+<li><div class="slide-h2 y tn">2014</div><div class="slide-caption" style="margin-top:8px">Štart služieb sportnet.online</div></li>
+<li><div class="slide-h2 y tn">2015</div><div class="slide-caption" style="margin-top:8px">Futbalnet V2, futbalnet.shop</div></li>
+<li><div class="slide-h2 y tn">2020</div><div class="slide-caption" style="margin-top:8px">Portál sportnet.sk</div></li>
+</ol></div>
+<script>/* statický vzor */</script>

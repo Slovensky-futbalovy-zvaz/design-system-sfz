@@ -1,0 +1,11 @@
+<!-- @dsCard group="Dáta" height=420 subtitle="Hľadanie, filter, zoradenie, stránkovanie" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+const kluby=["MŠK Žilina","Spartak Trnava","ŠK Slovan Bratislava","FC Košice","AS Trenčín","MFK Ružomberok","FK Železiarne Podbrezová","FC DAC 1904","Dukla Banská Bystrica","KFC Komárno","MFK Skalica","FC ViOn Zlaté Moravce"];
+const rows=kluby.map((k,i)=>({id:i+1,klub:k,region:["ZsFZ","SsFZ","VsFZ","BFZ"][i%4],hraci:120+i*17,stav:i%3===0?"Čaká":"Uhradené"}));
+return h(S.DataTable,{rowKey:r=>r.id,rows,pageSize:5,filters:[{key:"region",label:"Región",options:["BFZ","ZsFZ","SsFZ","VsFZ"]}],toolbar:h(S.Button,{size:"sm",icon:"download",variant:"secondary"},"Export"),columns:[{key:"klub",header:"Klub",sortable:true},{key:"region",header:"Región",hideOnMobile:true},{key:"hraci",header:"Hráči",align:"right",sortable:true},{key:"stav",header:"Stav",render:r=>h(S.Badge,{tone:r.stav==="Čaká"?"warning":"success",dot:true},r.stav)}]});}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

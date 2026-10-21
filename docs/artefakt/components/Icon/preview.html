@@ -1,0 +1,9 @@
+<!-- @dsCard group="Obsah" height=120 subtitle="Lucide ikony v bundli" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+return h("div",{className:"row",style:{gap:16}},Object.keys(S.ICON_PATHS).map(n=>h("span",{key:n,title:n,style:{display:"grid",placeItems:"center",width:36,height:36,borderRadius:8,background:"var(--surface-raised)"}},h(S.Icon,{name:n,label:n}))));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

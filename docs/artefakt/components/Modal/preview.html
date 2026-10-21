@@ -1,0 +1,10 @@
+<!-- @dsCard group="Prekrytia" height=120 subtitle="Dialóg; na mobile ako sheet zdola" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+const [o,setO]=React.useState(false);
+return h("div",null,h(S.Button,{onClick:()=>setO(true)},"Otvoriť dialóg"),h(S.Modal,{open:o,onClose:()=>setO(false),title:"Uzavrieť zápis o stretnutí?",footer:h(React.Fragment,null,h(S.Button,{variant:"secondary",onClick:()=>setO(false)},"Zrušiť"),h(S.Button,{onClick:()=>setO(false)},"Uzavrieť zápis"))},h("p",{style:{margin:0}},"Po uzavretí už nebude možné meniť strelcov ani karty. Zmeny rieši riadiaci zväz súťaže.")));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

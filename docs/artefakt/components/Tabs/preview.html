@@ -1,0 +1,12 @@
+<!-- @dsCard group="Navigácia" height=150 subtitle="Podčiarknuté a segmentované" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+const [a,setA]=React.useState("zapasy"),[b,setB]=React.useState("tab");
+return h("div",{className:"col",style:{maxWidth:560}},
+ h(S.Tabs,{"aria-label":"Sekcie",value:a,onChange:setA,items:[{id:"zapasy",label:"Zápasy",count:12},{id:"tabulka",label:"Tabuľka"},{id:"strelci",label:"Strelci"},{id:"karty",label:"Karty",disabled:true}]}),
+ h(S.Tabs,{variant:"segmented","aria-label":"Zobrazenie",value:b,onChange:setB,items:[{id:"tab",label:"Tabuľka"},{id:"kal",label:"Kalendár"},{id:"mapa",label:"Mapa"}]}));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

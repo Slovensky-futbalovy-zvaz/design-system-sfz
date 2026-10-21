@@ -1,0 +1,9 @@
+<!-- @dsCard group="Spätná väzba" height=260 subtitle="Prázdny stav s akciou" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+return h(S.EmptyState,{icon:"inbox",title:"Žiadne podania",description:"Keď klub odošle podanie na komisiu, zobrazí sa tu.",action:h(S.Button,{icon:"plus"},"Nové podanie")});}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

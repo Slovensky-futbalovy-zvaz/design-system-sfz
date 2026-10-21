@@ -1,0 +1,13 @@
+<!-- @dsCard group="Spätná väzba" height=300 subtitle="Štyri tóny" -->
+<style>body{margin:0;padding:16px;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:flex;flex-direction:column;gap:12px;max-width:480px}</style>
+<div id="root"></div>
+<script>
+const h=React.createElement, S=SFZ;
+function App(){
+return h("div",{className:"col",style:{maxWidth:560}},
+ h(S.Alert,{tone:"info",title:"Nová verzia ISSF"},"Od 1. 11. pribudli rodičovské kontá."),
+ h(S.Alert,{tone:"success"},"Zápis o stretnutí bol uzatvorený."),
+ h(S.Alert,{tone:"warning",title:"Blíži sa termín",action:h(S.Button,{size:"sm",variant:"secondary"},"Uhradiť")},"Zberná faktúra je splatná o 3 dni."),
+ h(S.Alert,{tone:"danger",onClose:()=>{}},"Prihlásenie zlyhalo. Skontrolujte heslo."));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>
