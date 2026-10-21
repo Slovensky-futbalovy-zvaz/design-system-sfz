@@ -1,0 +1,48 @@
+{
+  "name": "@sfz/design-system",
+  "version": "1.0.0",
+  "description": "Design systém Slovenského futbalového zväzu – tokeny, React komponenty, logá",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": "./components/src/index.ts",
+    "./tokens.css": "./tokens/tokens.css",
+    "./tokens.json": "./tokens/tokens.json",
+    "./components.css": "./components/bundle.css",
+    "./brand/*": "./brand/*"
+  },
+  "types": "./components/src/index.ts",
+  "files": [
+    "components",
+    "tokens",
+    "brand",
+    "docs",
+    "scripts"
+  ],
+  "scripts": {
+    "build:tokens": "node scripts/build-tokens.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run build:tokens && npm run typecheck && npm test"
+  },
+  "peerDependencies": {
+    "react": ">=18.2",
+    "react-dom": ">=18.2"
+  },
+  "devDependencies": {
+    "@testing-library/react": "16.1.0",
+    "@types/node": "22.9.0",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "jsdom": "25.0.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.6.3",
+    "vitest": "2.1.8"
+  }
+}
