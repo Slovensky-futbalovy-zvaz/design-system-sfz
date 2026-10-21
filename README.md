@@ -25,6 +25,7 @@ Prehliadateľná verzia (brand book so živými náhľadmi): artefakt **SFZ Desi
 | `templates/prezentacie/` | 9 hotových HTML šablón slajdov s logami SFZ, prehľad `index.html` |
 | `tools/qr/` | Generátor QR kódu SFZ (okrúhle body, logo v strede, kruh alebo štvorec) – `index.html` v prehliadači alebo `npm run qr` |
 | `docs/decisions/` | Architektonické rozhodnutia (ADR) |
+| `docs/ukazky/` | Ukážky všetkých webových komponentov v prehliadači (svetlá aj tmavá téma, funguje aj z disku) – `index.html` |
 | `docs/artefakt/` | Náhľady a mapovanie na artefakt SFZ Design System na claude.ai |
 | `docs/skills/sfz-prezentacia/` | Skill pre Claude na tvorbu prezentácií SFZ |
 | `docs/prenos-do-firemneho-konta.md` | Ako postaviť artefakt a skill v inom konte Claude |
@@ -41,10 +42,25 @@ Prehliadateľná verzia (brand book so živými náhľadmi): artefakt **SFZ Desi
 
 ## Použitie v Next.js (App Router)
 
-### Varianta A – balík z GitHubu (odporúčané)
+### Varianta A – balík z GitHub Packages (odporúčané)
+
+Balík `@slovensky-futbalovy-zvaz/design-system` sa publikuje automaticky pri každom releasi. GitHub Packages vyžaduje prihlásenie aj pri verejnom balíku: vytvorte si [osobný token](https://github.com/settings/tokens) s právom `read:packages` a do `.npmrc` projektu (necommitujte token, použite premennú prostredia) pridajte:
+
+```ini
+@slovensky-futbalovy-zvaz:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+```
+
+Inštalácia pod skráteným menom `@sfz/design-system` (alias, importy v kóde ostávajú rovnaké):
 
 ```bash
-npm install github:Slovensky-futbalovy-zvaz/design-system-sfz#v1.4.0
+npm install @sfz/design-system@npm:@slovensky-futbalovy-zvaz/design-system@^1.5.0
+```
+
+### Varianta B – priamo z gitu (bez tokenu)
+
+```bash
+npm install github:Slovensky-futbalovy-zvaz/design-system-sfz#v1.5.0
 ```
 
 ```js
@@ -105,10 +121,14 @@ V Claude sa prezentácie tvoria v Claude Slides s artefaktom SFZ Design System. 
 
 ## Vývoj
 
+Každý pull request a push do `main` kontroluje GitHub Actions (`.github/workflows/ci.yml`: `npm run check`). Pri zverejnení releasu sa balík automaticky publikuje do GitHub Packages (`.github/workflows/publish.yml`); verzia v `package.json` musí sedieť s tagom.
+
 ```bash
 npm install
 npm run build:tokens   # tokens.json → tokens.css
 npm run typecheck      # TypeScript
+npm run lint           # ESLint: TypeScript, React, Hooks, prístupnosť (jsx-a11y)
+npm run build:ukazky   # po zmene náhľadov: obnoví docs/ukazky/index.html
 npm test               # Vitest: tokeny, kontrast, render a správanie komponentov
 npm run check          # všetko naraz
 npm run qr -- "https://futbalsfz.sk" --tvar kruh -o qr.svg   # QR kód SFZ (alebo tools/qr/index.html)

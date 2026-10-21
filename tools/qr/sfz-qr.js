@@ -3,7 +3,7 @@
  * Okrúhle body, zaoblené rohové značky, v strede logo SFZ (variant A) na bielom kruhu.
  * Tvar „kruh“: QR kód v kruhu s dekoratívnym vzorom bodov a obrysom, tvar „stvorec“: klasický štvorec.
  *
- * Klasický skript bez závislostí okrem knižnice qrcode-generator (globál `qrcode`) a loga (globál `SFZ_QR_LOGO`).
+ * Klasický skript bez závislostí okrem knižnice qrcode-generator 1.4.4, MIT (tools/qr/vendor/, globál `qrcode`) a loga (globál `SFZ_QR_LOGO`).
  * Funguje v prehliadači (tools/qr/index.html) aj v Node cez vm (scripts/qr.mjs).
  * Použitie: SFZQR.svg("https://futbalsfz.sk", { tvar: "kruh", farba: "#1450df", velkost: 1024 }) → reťazec SVG.
  *

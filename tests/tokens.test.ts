@@ -5,14 +5,15 @@ import { buildCss, valueFor } from "../scripts/build-tokens.mjs";
 
 const tokens = JSON.parse(readFileSync(join(process.cwd(), "tokens/tokens.json"), "utf8"));
 const themes: string[] = tokens.color.themes.map((t: { id: string }) => t.id);
-const colors = new Map<string, any>(tokens.color.tokens.map((t: any) => [t.name, t]));
+type Tok = { name: string; value: unknown };
+const colors = new Map<string, Tok>(tokens.color.tokens.map((t: Tok) => [t.name, t]));
 
 /** Vyrieši farbu pre tému vrátane aliasov {meno}. */
 function resolve(name: string, theme: string, depth = 0): string {
   if (depth > 16) throw new Error(`Cyklus aliasov: ${name}`);
   const t = colors.get(name);
   if (!t) throw new Error(`Neznámy token: ${name}`);
-  const v = valueFor(t, theme, themes[0]);
+  const v = String(valueFor(t, theme, themes[0]));
   const m = /^\{(.+)\}$/.exec(v);
   return m ? resolve(m[1], theme, depth + 1) : v;
 }
@@ -31,7 +32,7 @@ function contrast(a: string, b: string): number {
 describe("tokens.json", () => {
   it("má unikátne názvy tokenov naprieč rodinami", () => {
     const names: string[] = [];
-    for (const [k, v] of Object.entries<any>(tokens)) if (v && Array.isArray(v.tokens)) names.push(...v.tokens.map((t: any) => t.name));
+    for (const v of Object.values(tokens) as Array<{ tokens?: Array<{ name: string }> }>) if (v && Array.isArray(v.tokens)) names.push(...v.tokens.map((t) => t.name));
     expect(new Set(names).size).toBe(names.length);
   });
 
@@ -51,9 +52,10 @@ describe("tokens.json", () => {
     ["ink-muted", "surface", 4.5],
     ["ink-muted", "surface-raised", 4.5],
     ["on-brand", "brand-blue", 4.5],
-    // Červená SFZ z manuálu (#ec1c24) má s bielou 4.41:1 – vyhovuje len pre veľký/tučný text (≥ 3:1).
-    // Otvorený bod v NEXT.md: token pre plné červené tlačidlo (danger-solid).
+    // Červená SFZ z manuálu (#ec1c24) má s bielou 4.41:1 – len pre veľký/tučný text (≥ 3:1).
     ["on-brand", "brand-red", 3],
+    // Plné červené plochy s textom (tlačidlo danger, odznak) používajú danger-solid: AA pre bežný text.
+    ["on-brand", "danger-solid", 4.5],
     ["brand-blue-ink", "surface", 4.5],
     ["brand-blue-ink", "surface-raised", 4.5],
     ["brand-blue-ink", "brand-blue-tint", 4.5],

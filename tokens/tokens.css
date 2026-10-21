@@ -31,6 +31,7 @@
   --warning-tint: #fff4e0;
   --warning-ink: #6b3f00;
   --danger: var(--brand-red);
+  --danger-solid: #dc1a21;
   --danger-tint: var(--brand-red-tint);
   --danger-ink: #8f0f14;
   --info: var(--brand-blue);

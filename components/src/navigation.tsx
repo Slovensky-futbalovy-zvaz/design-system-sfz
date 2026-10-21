@@ -164,7 +164,7 @@ export function Modal({ open, onClose, title, children, footer, size = "md", she
   if (!open) return null;
   const id = `sfz-modal-${title.replace(/\W+/g, "-").toLowerCase()}`;
   return (
-    <div className="sfz-overlay" onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+    <div className="sfz-overlay" role="presentation" onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}>
       <div ref={ref} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby={id} className={cx("sfz-modal", `sfz-modal--${size}`, sheetOnMobile && "sfz-modal--sheet")}>
         <header className="sfz-modal__head">
           <h2 id={id} className="sfz-modal__title">{title}</h2>
@@ -193,7 +193,7 @@ export function Drawer({ open, onClose, title, side = "left", children, width = 
   useEscape(open, onClose);
   if (!open) return null;
   return (
-    <div className="sfz-overlay sfz-overlay--drawer" onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+    <div className="sfz-overlay sfz-overlay--drawer" role="presentation" onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}>
       <aside role="dialog" aria-modal="true" aria-label={title ?? "Panel"} className={cx("sfz-drawer", `sfz-drawer--${side}`)} style={{ width: `min(85vw, ${width}px)` }}>
         <header className="sfz-drawer__head">
           {title && <h2 className="sfz-drawer__title">{title}</h2>}

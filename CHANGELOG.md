@@ -2,6 +2,23 @@
 
 Formát podľa [Keep a Changelog](https://keepachangelog.com/sk/1.1.0/), verzie podľa [SemVer](https://semver.org/lang/sk/).
 
+## [1.5.0] – 2026-10-22
+
+### Pridané
+- Token `danger-solid` (#dc1a21) pre plné červené plochy s textom: biela na ňom 4,98 : 1 (WCAG AA aj pre bežný text). Používa ho `Button variant="danger"` a odznak v `TabBar`; test kontrastu.
+- Ukážky komponentov `docs/ukazky/index.html` (vygenerované `npm run build:ukazky` z náhľadov artefaktu): všetky webové komponenty, svetlá a tmavá téma, mobile first, lokálny React 18.3.1 – funguje bez internetu.
+- ESLint (TypeScript, React, React Hooks, jsx-a11y) v `npm run lint` a v `npm run check`.
+- GitHub Actions: CI (`npm run check` na pull requesty a push do `main`) a publikovanie balíka do GitHub Packages pri releasi.
+- Lokálna kópia `qrcode-generator` 1.4.4 v `tools/qr/vendor/` – generátor QR funguje bez internetu.
+
+### Zmenené
+- Balík premenovaný na `@slovensky-futbalovy-zvaz/design-system` (požiadavka GitHub Packages); pod starým menom ho možno inštalovať aliasom `@sfz/design-system@npm:@slovensky-futbalovy-zvaz/design-system`. README s návodom pre `.npmrc`.
+- `Modal` a `Drawer`: pozadie s `role="presentation"` (prístupnosť); `DataTable` bez `any`; `Calendar` bez výrazu ako príkazu. Bez zmeny správania.
+- Brand book, `on-brand` a `danger`: správne kontrasty (`brand-red` 4,41 : 1 len pre veľký text).
+
+### Odstránené
+- Závislosť `qrcode-generator` z `devDependencies` (nahradená lokálnou kópiou).
+
 ## [1.4.0] – 2026-10-21
 
 ### Pridané

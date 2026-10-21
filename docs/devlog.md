@@ -2,6 +2,22 @@
 
 Pracovný denník repozitára. Najnovší záznam hore. E‑maily, tokeny a ID sú v zápisoch maskované.
 
+## 2026-10-22 – v1.5.0
+
+**Čo sa urobilo**
+- `danger-solid` (#dc1a21) pre plné červené tlačidlo a odznak – WCAG AA; `brand-red` ostáva pre značku.
+- `docs/ukazky/index.html`: ukážky všetkých webových komponentov (generované z náhľadov artefaktu, lokálny React), overené na 390 a 1280 px v oboch témach.
+- ESLint (TS, React, Hooks, jsx-a11y) – opravené nálezy (`any`, výraz ako príkaz, `role="presentation"` na pozadí dialógov; zmena prenesená aj do `bundle.js`).
+- GitHub Actions CI a publikovanie do GitHub Packages; balík premenovaný na `@slovensky-futbalovy-zvaz/design-system`.
+- QR generátor s lokálnou kópiou knižnice.
+
+**Čo treba vedieť**
+- `bundle.js` nemá v repozitári build skript; zmeny v `components/src` treba preniesť do bundla ručne (alebo doplniť build, napr. esbuild).
+- GitHub Packages vyžaduje token s `read:packages` aj pre verejný balík.
+
+**Čo nefungovalo a prečo**
+- Ročníkové logá sa nedajú spoľahlivo generovať pre ľubovoľný rok: ročník je v písme, ktoré v podkladoch nemáme (porovnané s BauPro z manuálu – iný tvar aj hrúbka); k dispozícii sú len číslice 0, 2, 3, 4.
+
 ## 2026-10-21 (večer) – v1.4.0
 
 **Čo sa urobilo**
@@ -15,7 +31,7 @@ Pracovný denník repozitára. Najnovší záznam hore. E‑maily, tokeny a ID s
 
 **Ďalej**
 - QR kód SFZ (kruh, odkaz na LinkedIn) nasadený ako PNG na záverečný slajd prezentácie UKF Nitra; overený ZXing pri 200 – 1024 px.
-- v1.3.1 tag overený; v1.4.0 čaká na vytvorenie cez GitHub Releases.
+- v1.3.1 a v1.4.0 tagy overené proti commitom.
 
 **Čo nefungovalo a prečo**
 - Úložisko assetov artefaktu odstránilo z nahraného SVG vložené logo (sanitizácia `href` s data URI); v artefakte je preto náhľad QR ako PNG a dokumentácia odporúča PNG pre takéto systémy.

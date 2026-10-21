@@ -351,7 +351,7 @@ var SFZ = (() => {
     }, [open]);
     if (!open) return null;
     const id = `sfz-modal-${title.replace(/\W+/g, "-").toLowerCase()}`;
-    return /* @__PURE__ */ React4.createElement("div", { className: "sfz-overlay", onMouseDown: (e) => {
+    return /* @__PURE__ */ React4.createElement("div", { className: "sfz-overlay", role: "presentation", onMouseDown: (e) => {
       if (e.target === e.currentTarget) onClose();
     } }, /* @__PURE__ */ React4.createElement("div", { ref, tabIndex: -1, role: "dialog", "aria-modal": "true", "aria-labelledby": id, className: cx3("sfz-modal", `sfz-modal--${size}`, sheetOnMobile && "sfz-modal--sheet") }, /* @__PURE__ */ React4.createElement("header", { className: "sfz-modal__head" }, /* @__PURE__ */ React4.createElement("h2", { id, className: "sfz-modal__title" }, title), /* @__PURE__ */ React4.createElement("button", { type: "button", className: "sfz-modal__close", "aria-label": "Zavrie\u0165", onClick: onClose }, /* @__PURE__ */ React4.createElement(Icon, { name: "x", size: 20 }))), /* @__PURE__ */ React4.createElement("div", { className: "sfz-modal__body" }, children), footer && /* @__PURE__ */ React4.createElement("footer", { className: "sfz-modal__foot" }, footer)));
   }
@@ -359,7 +359,7 @@ var SFZ = (() => {
     useLockBody(open);
     useEscape(open, onClose);
     if (!open) return null;
-    return /* @__PURE__ */ React4.createElement("div", { className: "sfz-overlay sfz-overlay--drawer", onMouseDown: (e) => {
+    return /* @__PURE__ */ React4.createElement("div", { className: "sfz-overlay sfz-overlay--drawer", role: "presentation", onMouseDown: (e) => {
       if (e.target === e.currentTarget) onClose();
     } }, /* @__PURE__ */ React4.createElement("aside", { role: "dialog", "aria-modal": "true", "aria-label": title != null ? title : "Panel", className: cx3("sfz-drawer", `sfz-drawer--${side}`), style: { width: `min(85vw, ${width}px)` } }, /* @__PURE__ */ React4.createElement("header", { className: "sfz-drawer__head" }, title && /* @__PURE__ */ React4.createElement("h2", { className: "sfz-drawer__title" }, title), /* @__PURE__ */ React4.createElement("button", { type: "button", className: "sfz-modal__close", "aria-label": "Zavrie\u0165", onClick: onClose }, /* @__PURE__ */ React4.createElement(Icon, { name: "x", size: 20 }))), /* @__PURE__ */ React4.createElement("div", { className: "sfz-drawer__body" }, children)));
   }

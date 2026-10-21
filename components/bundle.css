@@ -23,7 +23,7 @@
 .sfz-btn--secondary:hover{background:var(--surface-raised);color:var(--brand-blue-deep)}
 .sfz-btn--tertiary{background:transparent;color:var(--brand-blue-ink)}
 .sfz-btn--tertiary:hover{background:var(--brand-blue-tint)}
-.sfz-btn--danger{background:var(--danger);color:var(--on-brand)}
+.sfz-btn--danger{background:var(--danger-solid);color:var(--on-brand)}
 .sfz-btn--danger:hover{filter:brightness(0.92)}
 .sfz-btn:disabled{background:var(--disabled-bg);color:var(--disabled-ink);cursor:not-allowed;transform:none}
 .sfz-btn.is-loading{color:var(--on-brand);background:var(--brand-blue);opacity:0.8}
@@ -202,7 +202,7 @@
 .sfz-tabbar__item:focus-visible{outline:none;box-shadow:var(--shadow-focus)}
 .sfz-tabbar__icon{position:relative;display:grid;place-items:center;height:26px}
 .sfz-tabbar__label{font-size:10px;line-height:12px;font-weight:500}
-.sfz-tabbar__badge{position:absolute;top:-4px;left:calc(50% + 6px);min-width:16px;height:16px;padding:0 4px;border-radius:var(--radius-pill);background:var(--danger);color:var(--on-brand);font-size:10px;line-height:16px;font-weight:700;text-align:center}
+.sfz-tabbar__badge{position:absolute;top:-4px;left:calc(50% + 6px);min-width:16px;height:16px;padding:0 4px;border-radius:var(--radius-pill);background:var(--danger-solid);color:var(--on-brand);font-size:10px;line-height:16px;font-weight:700;text-align:center}
 @media (min-width:768px){.sfz-tabbar{display:none}}
 
 /* ---------- Modal / Drawer ---------- */

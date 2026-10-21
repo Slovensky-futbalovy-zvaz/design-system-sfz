@@ -7,7 +7,7 @@ import vm from "node:vm";
 /** Načíta knižnicu qrcode-generator, logo a renderer do izolovaného kontextu a vráti SFZQR. */
 export function nacitajSfzQr(root = process.cwd()) {
   const ctx = vm.createContext({ Math });
-  for (const f of ["node_modules/qrcode-generator/qrcode.js", "tools/qr/logo-sfz-a.js", "tools/qr/sfz-qr.js"]) {
+  for (const f of ["tools/qr/vendor/qrcode-generator-1.4.4.js", "tools/qr/logo-sfz-a.js", "tools/qr/sfz-qr.js"]) {
     vm.runInContext(readFileSync(join(root, f), "utf8"), ctx, { filename: f });
   }
   return ctx.SFZQR;

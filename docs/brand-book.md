@@ -16,10 +16,10 @@ Design systém Slovenského futbalového zväzu pre prezentácie, dokumenty a we
 - Modrý text a ikony (odkazy, sekundárne a textové tlačidlá, aktívna záložka, vybraný chip) vždy `brand-blue-ink`, nikdy `brand-blue`: v tmavej téme je `brand-blue` na tmavom pozadí nečitateľná (3:1). `brand-blue` ostáva pre plochy a výplne (primárne tlačidlo, checkbox, vybraný deň).
 - Modré plochy: `surface-brand` + `on-brand` / `on-brand-muted`, logo biely variant.
 - Linky a okraje: `hairline` / `border` 1 px pre deliace čiary a karty; okraj nesúci význam `border-strong` (≥ 3:1) – vstupné polia, checkbox, krokovač.
-- Stavy: `success`, `warning`, `danger`, `info` s podkladmi `*-tint` a textom `*-ink`. Stav vždy pomenujte slovom alebo ikonou; `success` a `danger` sa líšia svetlosťou aj odtieňom.
+- Stavy: `success`, `warning`, `danger`, `info` s podkladmi `*-tint` a textom `*-ink`. Plné červené plochy s bielym textom (tlačidlo `danger`, odznak) používajú `danger-solid` (#dc1a21, 4,98 : 1); `brand-red` (#ec1c24) s bielym textom len pri veľkom alebo tučnom písme. Stav vždy pomenujte slovom alebo ikonou; `success` a `danger` sa líšia svetlosťou aj odtieňom.
 - Grafy: `chart-1` až `chart-4`; série sa líšia svetlosťou (`chart-1` vs `chart-4`), nie odtieňom.
 - Farby programov (`gold`, `program-green`, `program-sky`, `program-yellow`, `program-cyan`) patria len k logám daných programov (Futbalista roka, Sieň slávy, Regionálny turnaj…), nie do UI.
-- Kontrast: `ink`/`surface` 18:1, `ink-muted` 5.6:1 a viac, `on-brand`/`brand-blue` 6.5:1, `on-brand`/`brand-red` 4.4:1 (len veľký alebo tučný text ≥ 19 px; plné červené tlačidlo je otvorený bod v NEXT.md), `brand-blue-ink` 5.6–7.2:1 na všetkých povrchoch a na `brand-blue-tint`, `border-strong` 3.3–4.0:1, všetky `*-ink`/`*-tint` ≥ 7:1, v oboch témach. Nedeľa v kalendári `danger-ink`.
+- Kontrast: `ink`/`surface` 18:1, `ink-muted` 5.6:1 a viac, `on-brand`/`brand-blue` 6.5:1, `on-brand`/`brand-red` 4.4:1 (len veľký alebo tučný text ≥ 19 px), `on-brand`/`danger-solid` 4.98:1 (plné červené tlačidlo a odznak), `brand-blue-ink` 5.6–7.2:1 na všetkých povrchoch a na `brand-blue-tint`, `border-strong` 3.3–4.0:1, všetky `*-ink`/`*-tint` ≥ 7:1, v oboch témach. Nedeľa v kalendári `danger-ink`.
 
 ## Typografia
 

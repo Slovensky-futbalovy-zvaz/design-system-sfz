@@ -60,7 +60,7 @@ export function Table<T>({ columns, rows, rowKey, onRowClick, density = "comfort
             <tr key={rowKey(r)} onClick={onRowClick ? () => onRowClick(r) : undefined} tabIndex={onRowClick ? 0 : undefined} onKeyDown={onRowClick ? (e) => { if (e.key === "Enter") onRowClick(r); } : undefined}>
               {columns.map((c) => (
                 <td key={c.key} data-label={c.header} style={{ textAlign: c.align }} className={cx(c.align === "right" && "is-num", c.hideOnMobile && "sfz-hide-mobile")}>
-                  {c.render ? c.render(r) : String((r as any)[c.key] ?? "")}
+                  {c.render ? c.render(r) : String((r as Record<string, unknown>)[c.key] ?? "")}
                 </td>
               ))}
             </tr>
@@ -95,13 +95,13 @@ export function DataTable<T>({ rows, columns, searchable = true, searchPlacehold
     let out = rows;
     if (q.trim()) {
       const needle = q.toLowerCase();
-      out = out.filter((r) => columns.some((c) => String((r as any)[c.key] ?? "").toLowerCase().includes(needle)));
+      out = out.filter((r) => columns.some((c) => String((r as Record<string, unknown>)[c.key] ?? "").toLowerCase().includes(needle)));
     }
-    for (const [k, v] of Object.entries(fvals)) if (v) out = out.filter((r) => String((r as any)[k]) === v);
+    for (const [k, v] of Object.entries(fvals)) if (v) out = out.filter((r) => String((r as Record<string, unknown>)[k]) === v);
     if (sort) {
       const dir = sort.dir === "asc" ? 1 : -1;
       out = [...out].sort((a, b) => {
-        const av = (a as any)[sort.key], bv = (b as any)[sort.key];
+        const av = (a as Record<string, unknown>)[sort.key], bv = (b as Record<string, unknown>)[sort.key];
         if (typeof av === "number" && typeof bv === "number") return (av - bv) * dir;
         return String(av ?? "").localeCompare(String(bv ?? ""), "sk") * dir;
       });
@@ -182,7 +182,8 @@ export function Calendar({ value, onChange, month, onMonthChange, events = [], m
   const setMonth = (delta: number) => {
     const d = new Date(y, mo - 1 + delta, 1);
     const next = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
-    onMonthChange ? onMonthChange(next) : setInnerMonth(next);
+    if (onMonthChange) onMonthChange(next);
+    else setInnerMonth(next);
   };
   return (
     <div className={cx("sfz-calendar", className)}>

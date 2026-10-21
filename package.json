@@ -1,10 +1,16 @@
 {
-  "name": "@sfz/design-system",
-  "version": "1.4.0",
+  "name": "@slovensky-futbalovy-zvaz/design-system",
+  "version": "1.5.0",
   "description": "Design systém Slovenského futbalového zväzu – tokeny, React komponenty, logá",
-  "private": true,
   "type": "module",
   "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slovensky-futbalovy-zvaz/design-system-sfz.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "sideEffects": [
     "*.css"
   ],
@@ -29,26 +35,33 @@
   "scripts": {
     "build:tokens": "node scripts/build-tokens.mjs",
     "build:qr-logo": "node scripts/build-qr-logo.mjs",
+    "build:ukazky": "node scripts/build-ukazky.mjs",
     "qr": "node scripts/qr.mjs",
     "typecheck": "tsc --noEmit",
-    "lint": "tsc --noEmit",
+    "lint": "eslint .",
     "test": "vitest run",
-    "check": "npm run build:tokens && npm run typecheck && npm test"
+    "check": "npm run build:tokens && npm run typecheck && npm run lint && npm test"
   },
   "peerDependencies": {
     "react": ">=18.2",
     "react-dom": ">=18.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
     "@testing-library/react": "16.1.0",
     "@types/node": "22.9.0",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
+    "eslint": "^9.13.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "globals": "^15.11.0",
     "jsdom": "25.0.1",
-    "qrcode-generator": "1.4.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "typescript": "5.6.3",
+    "typescript-eslint": "^8.11.0",
     "vitest": "2.1.8"
   }
 }
