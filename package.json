@@ -4,7 +4,7 @@
   "description": "Design systém Slovenského futbalového zväzu – tokeny, React komponenty, logá",
   "private": true,
   "type": "module",
-  "license": "UNLICENSED",
+  "license": "SEE LICENSE IN LICENSE.md",
   "sideEffects": [
     "*.css"
   ],

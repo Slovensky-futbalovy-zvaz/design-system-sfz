@@ -2,6 +2,11 @@
 
 Formát podľa [Keep a Changelog](https://keepachangelog.com/sk/1.1.0/), verzie podľa [SemVer](https://semver.org/lang/sk/).
 
+## [Nevydané]
+
+### Zmenené
+- Repozitár je verejný. Nové podmienky použitia v `LICENSE.md`: zamestnanci a zmluvní partneri SFZ môžu obsah používať na prácu pre SFZ, ostatní len s predchádzajúcim písomným súhlasom SFZ; logá ostávajú ochrannými známkami. README, `package.json` a návod na prenos upravené.
+
 ## [1.3.0] – 2026-10-21
 
 ### Pridané

@@ -4,7 +4,7 @@ Artefakty na claude.ai patria kontu, v ktorom vznikli. Zdrojom pravdy je preto t
 
 ## 1. Pripojte GitHub
 
-Vo firemnom konte Claude pripojte GitHub s prístupom k organizácii **Slovensky-futbalovy-zvaz** a k repozitáru `design-system-sfz` (ak je aplikácia Claude povolená len pre vybrané repozitáre, pridajte ho v nastaveniach organizácie: Settings → GitHub Apps → Claude → Repository access).
+Repozitár je verejný, takže na čítanie stačí jeho adresa. Vo firemnom konte Claude pripojte GitHub s prístupom k organizácii **Slovensky-futbalovy-zvaz** a k repozitáru `design-system-sfz` len vtedy, ak má Claude do repozitára aj zapisovať (ak je aplikácia Claude povolená len pre vybrané repozitáre, pridajte ho v nastaveniach organizácie: Settings → GitHub Apps → Claude → Repository access). Použitie obsahu sa riadi [`LICENSE.md`](../LICENSE.md).
 
 ## 2. Vytvorte artefakt design systému
 
