@@ -21,7 +21,8 @@ Prehliadateľná verzia (brand book so živými náhľadmi): artefakt **SFZ Desi
 | `components/docs/` | Pravidlá použitia každého komponentu (props, kedy použiť, do/don't) |
 | `brand/logos/` | 16 značiek SFZ × farebná/čierna/biela, SVG + PNG; README každej skupiny má ochranné zóny |
 | `docs/brand-book.md` | Pravidlá farieb, typografie, rozloženia, prístupnosti a tónu textu |
-| `docs/prezentacie/` | Vzory slajdov 1920×1080 (titul, predel, obsah, čísla, časová os, logá) |
+| `docs/prezentacie/` | Pravidlá pre slajdy 1920×1080 (titul, predel, obsah, čísla, časová os, logá) |
+| `templates/prezentacie/` | 7 hotových HTML šablón slajdov s logami SFZ, prehľad `index.html` |
 | `docs/decisions/` | Architektonické rozhodnutia (ADR) |
 
 ## Komponenty
@@ -89,6 +90,14 @@ Bez atribútu sa téma riadi systémom (`prefers-color-scheme`). Vynútiť ju m�
 ### Logá
 
 Skopírujte potrebné súbory z `brand/logos/<skupina>/` do `public/brand/` a vkladajte cez `next/image` alebo `<img>`. Farebný variant patrí na bielu, biely na modrú, fotografiu a do tmavej témy. Pravidlá a ochranné zóny sú v README skupiny.
+
+## Prezentácie
+
+![Šablóny slajdov](templates/prezentacie/nahlady/01-titul.png)
+
+V `templates/prezentacie/` je 7 šablón slajdov 1920×1080 (titul, predel, obsah, čísla, časová os, citát, záver). Otvorte `index.html` v prehliadači, vyberte šablónu, nahraďte texty v [hranatých zátvorkách] a uložte do PDF cez Tlačiť → Uložiť ako PDF.
+
+V Claude sa prezentácie tvoria v Claude Slides s artefaktom SFZ Design System. Skill `sfz-prezentacia` zabezpečí, že Claude systém použije automaticky.
 
 ## Vývoj
 

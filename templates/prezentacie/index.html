@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="sk" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Šablóny slajdov SFZ</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<style>
+  /* Mobile first: 1 stĺpec, od 768 px 2 stĺpce, od 1280 px 3 stĺpce. */
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--surface); color: var(--ink); font-family: var(--font-sans); padding: var(--space-6) max(16px, env(safe-area-inset-right)) var(--space-8) max(16px, env(safe-area-inset-left)); }
+  header { display: flex; align-items: center; gap: var(--space-4); max-width: 1200px; margin: 0 auto var(--space-6); }
+  header img { height: 36px; width: auto; }
+  main { max-width: 1200px; margin: 0 auto; display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
+  @media (min-width: 768px) { main { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1280px) { main { grid-template-columns: repeat(3, 1fr); } }
+  a.tile { display: grid; gap: var(--space-2); background: var(--surface-raised); border-radius: var(--radius-md); padding: var(--space-3); color: inherit; text-decoration: none; min-height: 44px; }
+  a.tile:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  a.tile img { width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: var(--radius-sm); display: block; }
+  .tile .headline { color: var(--brand-blue-ink); }
+  p.intro { max-width: 1200px; margin: 0 auto var(--space-5); color: var(--ink-muted); }
+</style>
+</head>
+<body>
+<header><img src="../../brand/logos/Loga-SFZ/sfz-D-farebne.svg" alt="Slovenský futbalový zväz"><h1 class="title-2">Šablóny slajdov</h1></header>
+<p class="intro body">Slajdy 1920×1080. Otvorte šablónu, nahraďte texty v [hranatých zátvorkách] a vytlačte do PDF (Tlačiť → Uložiť ako PDF) alebo vložte do prezentácie.</p>
+<main>
+  <a class="tile" href="01-titul.html"><img src="nahlady/01-titul.png" alt=""><span class="headline">Titulný slajd</span><span class="footnote">Raz na začiatok prezentácie.</span></a>
+  <a class="tile" href="02-predel.html"><img src="nahlady/02-predel.png" alt=""><span class="headline">Predel bloku</span><span class="footnote">Začiatok každého bloku.</span></a>
+  <a class="tile" href="03-obsah.html"><img src="nahlady/03-obsah.png" alt=""><span class="headline">Obsahový slajd</span><span class="footnote">Max. 5 odrážok a karta s číslom.</span></a>
+  <a class="tile" href="04-cisla.html"><img src="nahlady/04-cisla.png" alt=""><span class="headline">Kľúčové čísla</span><span class="footnote">Max. 3 dlaždice, jedno číslo červené.</span></a>
+  <a class="tile" href="05-casova-os.html"><img src="nahlady/05-casova-os.png" alt=""><span class="headline">Časová os</span><span class="footnote">Max. 6 bodov, pointa červená.</span></a>
+  <a class="tile" href="06-citat.html"><img src="nahlady/06-citat.png" alt=""><span class="headline">Citát a karty</span><span class="footnote">Tvrdenie a citát vedľa seba.</span></a>
+  <a class="tile" href="07-zaver.html"><img src="nahlady/07-zaver.png" alt=""><span class="headline">Záver</span><span class="footnote">Poďakovanie a kontakt.</span></a>
+</main>
+</body>
+</html>

@@ -2,6 +2,13 @@
 
 Formát podľa [Keep a Changelog](https://keepachangelog.com/sk/1.1.0/), verzie podľa [SemVer](https://semver.org/lang/sk/).
 
+## [1.1.0] – 2026-10-21
+
+### Pridané
+- Šablóny slajdov 1920×1080 v `templates/prezentacie/`: titul, predel bloku, obsahový slajd, kľúčové čísla, časová os, citát a karty, záver. Používajú `tokens.css` a logá z `brand/logos/`, zmenšujú sa podľa okna a tlačia sa do PDF v plnej veľkosti.
+- Prehľad šablón `templates/prezentacie/index.html` (mobile first) a náhľady PNG.
+- Test, že šablóny odkazujú len na existujúce súbory a nepoužívajú pevné farby.
+
 ## [1.0.0] – 2026-10-21
 
 ### Pridané

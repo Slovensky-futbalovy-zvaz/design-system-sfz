@@ -1,0 +1,70 @@
+/* Spoločné štýly šablón slajdov SFZ (1920×1080). Hodnoty z tokens.css – žiadne pevné farby. */
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--ink);
+  font-family: var(--font-sans);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+/* Slajd sa zmenší podľa okna (skript nastaví --scale); pri tlači/PDF má plnú veľkosť. */
+.stage { width: calc(1920px * var(--scale, 1)); height: calc(1080px * var(--scale, 1)); }
+.slide {
+  width: 1920px; height: 1080px;
+  transform: scale(var(--scale, 1)); transform-origin: top left;
+  position: relative; overflow: hidden;
+  background: var(--surface);
+  padding: var(--space-8) var(--space-9) 160px;
+  display: flex; flex-direction: column; gap: var(--space-8);
+}
+.slide--brand { background: var(--surface-brand); color: var(--on-brand); }
+.slide--center { justify-content: center; }
+
+.eyebrow { text-transform: uppercase; color: var(--brand-blue-ink); }
+.slide--brand .eyebrow, .slide--brand .muted { color: var(--on-brand-muted); }
+.muted { color: var(--ink-muted); }
+.tn { font-variant-numeric: tabular-nums; }
+h1, h2, h3 { text-wrap: balance; }
+
+/* Päta: názov prezentácie + číslo vľavo, logo D vpravo (56 px) */
+.foot {
+  position: absolute; left: var(--space-9); right: var(--space-9); bottom: 48px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.foot img { height: 56px; width: auto; }
+
+/* Mriežky 7+5 a 4+4+4 */
+.grid-7-5 { display: grid; grid-template-columns: 7fr 5fr; gap: var(--space-7); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-7); }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-7); }
+
+.card { background: var(--surface-raised); border-radius: var(--radius-lg); padding: var(--space-7); display: flex; flex-direction: column; gap: var(--space-3); }
+.card--highlight { background: var(--brand-blue-tint); }
+.stat { color: var(--brand-blue-ink); }
+.stat--red { color: var(--brand-red); }
+ul.bullets { padding-left: 40px; display: grid; gap: var(--space-4); }
+
+/* Časová os */
+.timeline { position: relative; padding-top: var(--space-6); }
+.timeline::before { content: ""; position: absolute; left: 0; right: 0; top: 76px; height: 2px; background: var(--hairline); }
+.timeline ol { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-6); }
+.timeline li { position: relative; padding-top: 72px; display: grid; gap: var(--space-2); }
+.timeline li::before { content: ""; position: absolute; top: 32px; left: 0; width: 24px; height: 24px; border-radius: var(--radius-pill); background: var(--brand-blue); }
+.timeline .y { color: var(--brand-blue-ink); font-weight: 700; }
+.timeline li.is-key::before { background: var(--brand-red); }
+.timeline li.is-key .y { color: var(--brand-red); }
+
+
+@media print {
+  @page { size: 1920px 1080px; margin: 0; }
+  body { background: none; display: block; }
+  .stage { width: 1920px; height: 1080px; }
+  .slide { transform: none; }
+}
+
+/* V troch dlaždiciach je číslo menšie, aby sa zmestilo do jedného riadku (napr. „48 mil. €“). */
+.grid-3 .slide-stat { font-size: 80px; white-space: nowrap; }

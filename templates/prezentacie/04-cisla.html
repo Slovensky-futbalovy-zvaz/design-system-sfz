@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="sk" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kľúčové čísla – šablóna slajdu SFZ</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<link rel="stylesheet" href="slide.css">
+</head>
+<body>
+<!-- Max. 3 dlaždice; najviac jedno číslo červené, jedna dlaždica zvýraznená. -->
+<div class="stage">
+<section class="slide">
+  <div style="display:grid;gap:var(--space-5)">
+    <p class="slide-eyebrow eyebrow">Blok 2 · [téma]</p>
+    <h2 class="slide-h1" style="max-width:1600px">[Nadpis: čo čísla dokazujú]</h2>
+  </div>
+  <div class="grid-3">
+    <div class="card"><p class="slide-stat stat tn">[48 mil. €]</p><p class="slide-h2">[popis]</p><p class="slide-caption muted">[zdroj]</p></div>
+    <div class="card"><p class="slide-stat stat--red tn">[−3 body]</p><p class="slide-h2">[popis]</p><p class="slide-caption muted">[zdroj]</p></div>
+    <div class="card card--highlight"><p class="slide-stat tn">[197 122]</p><p class="slide-h2">[popis]</p><p class="slide-caption muted">[zdroj]</p></div>
+  </div>
+  <div class="foot"><span class="slide-caption muted">[Názov prezentácie] · 4</span><img src="../../brand/logos/Loga-SFZ/sfz-D-farebne.svg" alt="Slovenský futbalový zväz"></div>
+</section>
+</div>
+<script>
+  // Zmenší slajd 1920×1080 tak, aby sa zmestil do okna (mobil aj projektor).
+  function fit() { document.documentElement.style.setProperty("--scale", Math.min(innerWidth / 1920, innerHeight / 1080)); }
+  addEventListener("resize", fit); fit();
+</script>
+</body>
+</html>

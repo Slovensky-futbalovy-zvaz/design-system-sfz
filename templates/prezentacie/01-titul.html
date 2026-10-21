@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="sk" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Titulný slajd – šablóna slajdu SFZ</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<link rel="stylesheet" href="slide.css">
+</head>
+<body>
+<!-- Raz na začiatok. Nahraďte texty v hranatých zátvorkách. -->
+<div class="stage">
+<section class="slide slide--brand" style="justify-content:space-between">
+  <img src="../../brand/logos/Loga-SFZ/sfz-A-biele.svg" alt="Slovenský futbalový zväz" style="height:160px;width:auto;align-self:flex-start">
+  <div style="display:grid;gap:var(--space-6);max-width:1500px">
+    <p class="slide-eyebrow eyebrow">[Miesto] · [dátum]</p>
+    <h1 class="slide-display">[Názov prezentácie]</h1>
+    <p class="slide-h2 muted" style="font-weight:500">[Podtitul – o čom prezentácia je]</p>
+  </div>
+  <div class="foot"><span class="slide-caption muted">[Meno] · Slovenský futbalový zväz</span><img src="../../brand/logos/Loga-SFZ/sfz-D-biele.svg" alt=""></div>
+</section>
+</div>
+<script>
+  // Zmenší slajd 1920×1080 tak, aby sa zmestil do okna (mobil aj projektor).
+  function fit() { document.documentElement.style.setProperty("--scale", Math.min(innerWidth / 1920, innerHeight / 1080)); }
+  addEventListener("resize", fit); fit();
+</script>
+</body>
+</html>

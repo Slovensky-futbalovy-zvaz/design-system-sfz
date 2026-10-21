@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="sk" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obsahový slajd – šablóna slajdu SFZ</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<link rel="stylesheet" href="slide.css">
+</head>
+<body>
+<!-- Eyebrow, nadpis, max. 5 odrážok vľavo, voliteľná karta s číslom vpravo (mriežka 7+5). -->
+<div class="stage">
+<section class="slide">
+  <div style="display:grid;gap:var(--space-5)">
+    <p class="slide-eyebrow eyebrow">Blok 1 · [téma]</p>
+    <h2 class="slide-h1" style="max-width:1600px">[Nadpis slajdu – jedna myšlienka, max. dva riadky]</h2>
+  </div>
+  <div class="grid-7-5">
+    <ul class="slide-body bullets">
+      <li>[Odrážka – max. dva riadky]</li>
+      <li>[Odrážka]</li>
+      <li>[Odrážka]</li>
+      <li>[Odrážka]</li>
+    </ul>
+    <div class="card" style="justify-content:center">
+      <p class="slide-stat stat tn">[46]</p>
+      <p class="slide-h2">[čo číslo znamená]</p>
+      <p class="slide-caption muted">[zdroj, rok]</p>
+    </div>
+  </div>
+  <div class="foot"><span class="slide-caption muted">[Názov prezentácie] · 4</span><img src="../../brand/logos/Loga-SFZ/sfz-D-farebne.svg" alt="Slovenský futbalový zväz"></div>
+</section>
+</div>
+<script>
+  // Zmenší slajd 1920×1080 tak, aby sa zmestil do okna (mobil aj projektor).
+  function fit() { document.documentElement.style.setProperty("--scale", Math.min(innerWidth / 1920, innerHeight / 1080)); }
+  addEventListener("resize", fit); fit();
+</script>
+</body>
+</html>

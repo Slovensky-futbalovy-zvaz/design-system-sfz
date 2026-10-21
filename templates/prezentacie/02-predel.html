@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="sk" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Predel bloku – šablóna slajdu SFZ</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<link rel="stylesheet" href="slide.css">
+</head>
+<body>
+<!-- Začiatok každého bloku prezentácie. -->
+<div class="stage">
+<section class="slide slide--brand slide--center">
+  <p class="slide-stat tn muted" style="position:absolute;right:var(--space-9);top:var(--space-8)">01</p>
+  <div style="display:grid;gap:var(--space-7);max-width:1500px">
+    <p class="slide-eyebrow eyebrow">Blok 1 · [obdobie] · [minúty]</p>
+    <h1 class="slide-display">[Názov bloku]</h1>
+    <p class="slide-h2 muted" style="font-weight:500">[Jedna veta o obsahu bloku]</p>
+  </div>
+  <div class="foot"><span class="slide-caption muted">[Názov prezentácie] · 3</span><img src="../../brand/logos/Loga-SFZ/sfz-D-biele.svg" alt="Slovenský futbalový zväz"></div>
+</section>
+</div>
+<script>
+  // Zmenší slajd 1920×1080 tak, aby sa zmestil do okna (mobil aj projektor).
+  function fit() { document.documentElement.style.setProperty("--scale", Math.min(innerWidth / 1920, innerHeight / 1080)); }
+  addEventListener("resize", fit); fit();
+</script>
+</body>
+</html>

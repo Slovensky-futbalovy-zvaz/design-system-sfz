@@ -11,4 +11,4 @@ HTML vzory pre prezentácie 16:9 (1920×1080 px). Nie sú to React komponenty. P
 | [Timeline](Timeline.md) | vodorovná časová os |
 | [LogoLockup](LogoLockup.md) | správne použitie loga na svetlom a modrom |
 
-Živé náhľady sú v artefakte SFZ Design System na claude.ai. Prezentácie sa najrýchlejšie tvoria v Claude Slides s nainštalovaným SFZ Design Systemom.
+Hotové HTML šablóny sú v [`templates/prezentacie/`](../../templates/prezentacie/) (prehľad `index.html`). Živé náhľady sú aj v artefakte SFZ Design System na claude.ai. Prezentácie sa najrýchlejšie tvoria v Claude Slides s nainštalovaným SFZ Design Systemom.
