@@ -135,6 +135,7 @@
   --touch-target: 44px;
   --tabbar-height: 56px;
   --navbar-height: 64px;
+  --slide-band-height: 104px;
   --radius-xs: 6px;
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -170,6 +171,12 @@
 .slide-caption { font-family: var(--font-sans); font-size: 22px; line-height: 1.3; font-weight: 500; letter-spacing: 0.01em; }
 
 .slide-eyebrow { font-family: var(--font-sans); font-size: 20px; line-height: 1.2; font-weight: 600; letter-spacing: 0.12em; }
+
+.slide-band { font-family: var(--font-sans); font-size: 26px; line-height: 1.2; font-weight: 700; letter-spacing: 0.12em; }
+
+.slide-list-title { font-family: var(--font-sans); font-size: 28px; line-height: 1.3; font-weight: 700; }
+
+.slide-list-text { font-family: var(--font-sans); font-size: 24px; line-height: 1.35; font-weight: 400; }
 
 .large-title { font-family: var(--font-sans); font-size: 34px; line-height: 41px; font-weight: 700; letter-spacing: 0.37px; }
 

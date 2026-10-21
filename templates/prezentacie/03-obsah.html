@@ -8,19 +8,17 @@
 <link rel="stylesheet" href="slide.css">
 </head>
 <body>
-<!-- Eyebrow, nadpis, max. 5 odrážok vľavo, voliteľná karta s číslom vpravo (mriežka 7+5). -->
+<!-- Modrý pás (blok · téma), nadpis, zoznam s linkou (max. 5 položiek) vľavo, voliteľná karta s číslom vpravo (mriežka 7+5). -->
 <div class="stage">
-<section class="slide">
-  <div style="display:grid;gap:var(--space-5)">
-    <p class="slide-eyebrow eyebrow">Blok 1 · [téma]</p>
-    <h2 class="slide-h1" style="max-width:1600px">[Nadpis slajdu – jedna myšlienka, max. dva riadky]</h2>
-  </div>
+<section class="slide slide--content">
+  <div class="band"><p class="slide-band">Blok 1 · [téma]</p></div>
+  <h2 class="slide-h1" style="max-width:1600px">[Nadpis slajdu – jedna myšlienka, max. dva riadky]</h2>
   <div class="grid-7-5">
-    <ul class="slide-body bullets">
-      <li>[Odrážka – max. dva riadky]</li>
-      <li>[Odrážka]</li>
-      <li>[Odrážka]</li>
-      <li>[Odrážka]</li>
+    <ul class="linklist">
+      <li><span class="slide-list-title">[Tučný začiatok – pointa]</span><span class="slide-list-text d">[Vysvetlenie s faktami: miesto, počet, dôsledok – max. dva riadky]</span></li>
+      <li><span class="slide-list-title">[Tučný začiatok]</span><span class="slide-list-text d">[Vysvetlenie]</span></li>
+      <li><span class="slide-list-title">[Tučný začiatok]</span><span class="slide-list-text d">[Vysvetlenie]</span></li>
+      <li><span class="slide-list-title">[Tučný začiatok]</span><span class="slide-list-text d">[Vysvetlenie]</span></li>
     </ul>
     <div class="card" style="justify-content:center">
       <p class="slide-stat stat tn">[46]</p>

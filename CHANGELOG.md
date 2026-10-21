@@ -2,6 +2,19 @@
 
 Formát podľa [Keep a Changelog](https://keepachangelog.com/sk/1.1.0/), verzie podľa [SemVer](https://semver.org/lang/sk/).
 
+## [1.3.0] – 2026-10-21
+
+### Pridané
+- Vzor slajdu `LinkList` – zoznam s linkou namiesto klasických odrážok: zvislá linka, tučný začiatok a vysvetlenie (`docs/prezentacie/LinkList.md`, náhľad v `docs/artefakt/components/LinkList/`, trieda `.linklist` v šablónach).
+- Tokeny `slide-band`, `slide-list-title`, `slide-list-text` (typografia) a `slide-band-height` (104 px).
+
+### Zmenené
+- Obsahový slajd má hore modrý pás na celú šírku s bielym textom „Blok · téma“ namiesto modrého eyebrow (`SlideContent`, šablóny 03 – 06, trieda `.slide--content` a `.band`); náhľady šablón pregenerované.
+- Brand book a skill `sfz-prezentacia`: pravidlá pre modrý pás a zákaz klasických odrážok.
+
+### Zastarané
+- `ul.bullets` v `slide.css` – používajte `.linklist`.
+
 ## [1.2.0] – 2026-10-21
 
 ### Pridané

@@ -26,7 +26,9 @@ Potom navrhni osnovu (bloky, minutáž, počet slajdov) a počkaj na schválenie
 
 1. **Titul** – modrá plocha, eyebrow s miestom a dátumom, názov, podtitul, meno v päte.
 2. **Predel bloku** – modrá plocha, „Blok N · obdobie · minúty“, názov bloku, jedna veta; každý blok začína predelom.
-3. **Obsahový slajd** – biela plocha, eyebrow (blok · téma), nadpis s jednou myšlienkou (max. 2 riadky), max. 5 odrážok, voliteľne karta s číslom vpravo (mriežka 7+5).
+3. **Obsahový slajd** – biela plocha, hore modrý pás na celú šírku (104 px, `surface-brand`) s bielym textom „Blok N · téma“ verzálkami, pod ním nadpis s jednou myšlienkou (max. 2 riadky), zoznam max. 5 položiek, voliteľne karta s číslom vpravo (mriežka 7+5).
+   - **Žiadne klasické odrážky.** Zoznam je vždy vzor `LinkList`: zvislá linka 6 px vľavo (`brand-blue-ink`, neutrálny stĺpec `grey-9`), tučný začiatok (`slide-list-title`, 28 px) a pod ním vysvetlenie (`slide-list-text`, 24 px, `ink-muted`). Dôležité fakty (miesto, počet, historka) patria do vysvetlenia na slajde, nie len do poznámok.
+   - Lekcia alebo pointa: karta `brand-blue-tint` s tučným modrým začiatkom („Lekcia pre manažment: …“).
 4. **Kľúčové čísla** – max. 3 dlaždice; najviac jedno číslo červené, jedna dlaždica zvýraznená modrým tintom.
 5. **Časová os** – max. 6 bodov, pointa červená.
 6. **Citát a karty** – tvrdenie + citát v slovenských úvodzovkách „ “.
@@ -50,5 +52,6 @@ Ak ide o vystúpenie, ponúkni aj jednostranovú A4 osnovu (PDF): minutáž po b
 ## 6. Kontrola pred odovzdaním
 
 - Počet slajdov zodpovedá dĺžke (cca 1 slajd na 2 minúty).
-- Každý blok má predel, každý slajd pätu s logom.
+- Každý blok má predel, každý slajd pätu s logom, každý biely obsahový slajd modrý pás hore.
+- Na žiadnom slajde nie sú klasické odrážky (`<ul>` s bodkami); zoznamy sú `LinkList`.
 - Všetky čísla majú zdroj; neznáme hodnoty sú označené a vypísané v odpovedi.

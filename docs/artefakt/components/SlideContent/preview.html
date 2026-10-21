@@ -1,33 +1,32 @@
-<!-- @dsCard group="Slajdy" height=320 width=1920 subtitle="Bežný slajd s obsahom" -->
+<!-- @dsCard group="Slajdy" height=320 width=1920 subtitle="Bežný slajd s modrým pásom a zoznamom s linkou" -->
 <style>
 *{box-sizing:border-box;margin:0}
 body{font-family:var(--font-sans);color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased}
-.slide{width:1920px;height:1080px;position:relative;overflow:hidden;padding:64px 96px}
-.slide.blue{background:var(--surface-brand);color:var(--on-brand)}
-.foot{position:absolute;left:96px;right:96px;bottom:48px;display:flex;justify-content:space-between;align-items:center}
+.slide{width:1920px;height:1080px;position:relative;overflow:hidden;padding:184px 128px 160px;display:flex;flex-direction:column;gap:48px}
+.band{position:absolute;left:0;top:0;width:100%;height:var(--slide-band-height);background:var(--surface-brand);display:flex;align-items:center;padding:0 128px}
+.band p{color:var(--on-brand);text-transform:uppercase}
+.foot{position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;align-items:center}
 .foot img{height:56px}
-.eyebrow{text-transform:uppercase;color:var(--brand-blue)}
-.blue .eyebrow{color:var(--on-brand-muted)}
 .muted{color:var(--ink-muted)}
-.blue .muted{color:var(--on-brand-muted)}
 .tn{font-variant-numeric:tabular-nums}
+.ll{display:flex;flex-direction:column;gap:20px}
+.li{border-left:6px solid var(--brand-blue-ink);padding-left:24px;display:flex;flex-direction:column;gap:4px}
 </style>
 <div class="slide">
-  <div class="slide-eyebrow eyebrow" style="margin-bottom:24px">Blok 1 · Stav v roku 2010</div>
-  <h1 class="slide-h1" style="max-width:1500px;text-wrap:balance">„44 futbalov“ – každý zväz si viedol agendu po svojom</h1>
-  <div style="display:grid;grid-template-columns:7fr 5fr;gap:48px;margin-top:64px">
-    <ul class="slide-body" style="padding-left:40px;display:grid;gap:16px">
-      <li>46 organizácií: SFZ, ÚLK, futsal, 4 regionálne a 38 oblastných zväzov</li>
-      <li>Papierové zápisy poštou, oficiálne výsledky vo štvrtok</li>
-      <li>Šeky, rady na preukazy, e‑mail nebol oficiálne uznaný</li>
-      <li>Finančná disciplína klubov takmer nulová</li>
-    </ul>
+  <div class="band"><p class="slide-band">Blok 1 · Rok 2010</p></div>
+  <h1 class="slide-h1" style="max-width:1600px;text-wrap:balance">„44 futbalov“: každý zväz si viedol agendu po svojom</h1>
+  <div style="display:grid;grid-template-columns:7fr 5fr;gap:48px">
+    <div class="ll">
+      <div class="li"><div class="slide-list-title">Futbal je malá „štátna správa“</div><div class="slide-list-text muted">SFZ, ÚLK, futsal, plážový futbal, 4 regionálne a 38 oblastných zväzov</div></div>
+      <div class="li"><div class="slide-list-title">Papierové zápisy o stretnutí poštou</div><div class="slide-list-text muted">oficiálne výsledky najskôr vo štvrtok</div></div>
+      <div class="li"><div class="slide-list-title">E‑mail nebol oficiálne akceptovaný</div><div class="slide-list-text muted">podania sa „strácali“ a neriešili</div></div>
+    </div>
     <div style="background:var(--surface-raised);border-radius:var(--radius-lg);padding:48px;display:flex;flex-direction:column;justify-content:center;gap:16px">
-      <div class="slide-stat tn" style="color:var(--brand-blue)">46</div>
+      <div class="slide-stat tn" style="color:var(--brand-blue-ink)">46</div>
       <div class="slide-h2">organizácií riadilo futbal</div>
       <div class="slide-caption muted">42 z nich mimo Bratislavy</div>
     </div>
   </div>
-  <div class="foot"><span class="slide-caption muted">Digitalizácia slovenského futbalu · 4</span><img src="../../../../brand/logos/Loga-SFZ/sfz-D-farebne.svg" alt=""></div>
+  <div class="foot"><span class="slide-caption muted">Digitalizácia slovenského futbalu · 5</span><img src="../../../../brand/logos/Loga-SFZ/sfz-D-farebne.svg" alt=""></div>
 </div>
 <script>/* statický vzor */</script>

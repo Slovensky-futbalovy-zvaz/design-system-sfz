@@ -37,7 +37,7 @@ Design systém Slovenského futbalového zväzu pre prezentácie, dokumenty a we
 - Dotykové ciele min. `touch-target` 44 px. Zoskupené zoznamy ako iOS Settings: `surface-raised`, `radius-md`, riadky oddelené `hairline`.
 - Rádiusy: `radius-xs` 6 (checkbox), `radius-sm` 8 (chip), `radius-md` 14 (tlačidlá, vstupy), `radius-lg` 24 (karty), `radius-xl` 40 (veľké panely), `radius-pill`.
 - Tiene takmer nepoužívame; hierarchiu robí `surface-raised`. `shadow-float` pre plávajúce prvky, `shadow-modal` pre dialógy.
-- Slajd: bezpečná zóna 96 px zľava/sprava, 64 px zhora/zdola, logo D v päte 56 px.
+- Slajd: okraje 128 px zľava/sprava, päta 64 px od spodku, logo D v päte 56 px. Obsahový slajd má hore modrý pás `slide-band-height` (104 px) s textom `slide-band`; obsah začína 80 px pod ním.
 
 ## Komponenty pre web (React)
 
@@ -78,4 +78,4 @@ Pravidlá: jedno `primary` tlačidlo na obrazovku; stav vždy slovom + farbou; p
 
 ## Komponenty pre slajdy
 
-HTML vzory 1920×1080 (nie React): `SlideTitle`, `SlideSection`, `SlideContent`, `StatTile`, `Timeline`, `LogoLockup`. Karta a chip na slajde sú webové `Card` a `Chip` v mierke ×1,6 (rádius `radius-lg`, odstup `space-7`, text `slide-body`); pravidlá sú v ich README.
+HTML vzory 1920×1080 (nie React): `SlideTitle`, `SlideSection`, `SlideContent` (s modrým pásom hore), `LinkList`, `StatTile`, `Timeline`, `LogoLockup`. Na slajdoch nepoužívame klasické odrážky: zoznam je vždy `LinkList` – zvislá linka, tučný začiatok (`slide-list-title`) a vysvetlenie (`slide-list-text`). Karta a chip na slajde sú webové `Card` a `Chip` v mierke ×1,6 (rádius `radius-lg`, odstup `space-7`, text `slide-body`); pravidlá sú v ich README.

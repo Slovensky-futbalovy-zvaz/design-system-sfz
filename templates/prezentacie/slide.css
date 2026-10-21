@@ -46,7 +46,18 @@ h1, h2, h3 { text-wrap: balance; }
 .card--highlight { background: var(--brand-blue-tint); }
 .stat { color: var(--brand-blue-ink); }
 .stat--red { color: var(--brand-red); }
-ul.bullets { padding-left: 40px; display: grid; gap: var(--space-4); }
+ul.bullets { padding-left: 40px; display: grid; gap: var(--space-4); } /* zastarané od 1.3.0 – používajte .linklist */
+
+/* Modrý pás hlavičky obsahového slajdu: blok · téma (od 1.3.0). Titul, predel a záver ho nemajú. */
+.slide--content { padding-top: calc(var(--slide-band-height) + 80px); }
+.band { position: absolute; left: 0; right: 0; top: 0; height: var(--slide-band-height); background: var(--surface-brand); display: flex; align-items: center; padding: 0 var(--space-9); }
+.band p { color: var(--on-brand); text-transform: uppercase; }
+
+/* Zoznam s linkou (LinkList) namiesto klasických odrážok: tučný začiatok + vysvetlenie (od 1.3.0) */
+.linklist { list-style: none; padding: 0; display: grid; gap: var(--space-5); align-content: start; }
+.linklist li { border-left: 6px solid var(--brand-blue-ink); padding-left: var(--space-5); display: grid; gap: var(--space-1); }
+.linklist li.neutral { border-left-color: var(--grey-9); }
+.linklist .d { color: var(--ink-muted); }
 
 /* Časová os */
 .timeline { position: relative; padding-top: var(--space-6); }

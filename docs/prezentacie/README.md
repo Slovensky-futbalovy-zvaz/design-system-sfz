@@ -6,7 +6,8 @@ HTML vzory pre prezentácie 16:9 (1920×1080 px). Nie sú to React komponenty. P
 | --- | --- |
 | [SlideTitle](SlideTitle.md) | titulný slajd, raz na prezentáciu |
 | [SlideSection](SlideSection.md) | modrý predel medzi blokmi |
-| [SlideContent](SlideContent.md) | bežný obsahový slajd |
+| [SlideContent](SlideContent.md) | bežný obsahový slajd s modrým pásom hore |
+| [LinkList](LinkList.md) | zoznam s linkou namiesto klasických odrážok |
 | [StatTile](StatTile.md) | dlaždice s číslami (max. 3) |
 | [Timeline](Timeline.md) | vodorovná časová os |
 | [LogoLockup](LogoLockup.md) | správne použitie loga na svetlom a modrom |

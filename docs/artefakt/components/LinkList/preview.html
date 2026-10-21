@@ -1,0 +1,35 @@
+<!-- @dsCard group="Slajdy" height=420 width=1920 subtitle="Zoznam s linkou namiesto odrážok" -->
+<style>
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--font-sans);color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased}
+.wrap{padding:48px 96px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.card{border-radius:var(--radius-lg);padding:40px;display:flex;flex-direction:column;gap:16px}
+.tint{background:var(--brand-blue-tint)}
+.raised{background:var(--surface-raised)}
+.card h3{font-size:36px;line-height:1.15;font-weight:700;letter-spacing:-0.01em}
+.tint h3{color:var(--brand-blue-ink)}
+.ll{display:flex;flex-direction:column;gap:16px}
+.li{border-left:6px solid var(--brand-blue-ink);padding-left:24px;display:flex;flex-direction:column;gap:4px}
+.li.neutral{border-left-color:var(--grey-9)}
+.li .t{color:var(--ink)}
+.li .d{color:var(--ink-muted)}
+</style>
+<div class="wrap">
+  <div class="card tint">
+    <h3>Čo fungovalo</h3>
+    <div class="ll">
+      <div class="li"><div class="slide-list-title t">Viac ako 200 školení</div><div class="slide-list-text d">osobne, po celom Slovensku; ľudia museli uveriť</div></div>
+      <div class="li"><div class="slide-list-title t">Slovník publika</div><div class="slide-list-text d">po prvej prezentácii v ObFZ Prievidza mi prezident zakázal slová „implementácia“ a „fulltime“</div></div>
+      <div class="li"><div class="slide-list-title t">Výsledok hneď</div><div class="slide-list-text d">report na pár klikov, výsledky do 24 hodín</div></div>
+    </div>
+  </div>
+  <div class="card raised">
+    <h3>Čoho sa všetci báli – a nestalo sa</h3>
+    <div class="ll">
+      <div class="li neutral"><div class="slide-list-title t">„Nemáme počítače“</div><div class="slide-list-text d">zo zvýhodnenej akcie sa nepredalo ani 300 notebookov na takmer 1 800 klubov</div></div>
+      <div class="li neutral"><div class="slide-list-title t">„Nemáme internet“</div><div class="slide-list-text d">rozhodcovia chodili robiť zápis do najbližšej krčmy s wifi – a zvládli to</div></div>
+      <div class="li neutral"><div class="slide-list-title t">„Starí funkcionári to nezvládnu“</div><div class="slide-list-text d">vekový priemer klubových manažérov výrazne klesol</div></div>
+    </div>
+  </div>
+</div>
+<script>/* statický vzor */</script>
