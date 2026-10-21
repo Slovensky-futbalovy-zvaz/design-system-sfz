@@ -14,7 +14,7 @@ Formát podľa [Keep a Changelog](https://keepachangelog.com/sk/1.1.0/), verzie 
 ### Zmenené
 - Šablóna `03-obsah.html` má kartu „Lekcia“ a tri položky zoznamu; `07-zaver.html` má riadok LinkedIn a QR kód v bielej karte.
 - Prehľad šablón: 9 šablón a odkaz na generátor QR; náhľady pregenerované.
-- Skill `sfz-prezentacia`: zvislá os, čísla s rozpisom, lekcia, záver s QR kódom.
+- Skill `sfz-prezentacia`: zvislá os, čísla s rozpisom, lekcia, záver s QR kódom; QR kód do prezentácií a systémov, ktoré čistia SVG, vkladať ako PNG (logo by zo SVG zmizlo).
 
 ## [1.3.1] – 2026-10-21
 

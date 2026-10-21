@@ -13,6 +13,10 @@ Pracovný denník repozitára. Najnovší záznam hore. E‑maily, tokeny a ID s
 - Čitateľnosť QR overená dekóderom ZXing (zxing-cpp) pri 150 – 1024 px; dlhé odkazy (~100 znakov) pri malej veľkosti a natočení zlyhávajú občas → v dokumentácii odporúčanie skracovať odkazy, min. 280 px na slajde / 3 cm v tlači. OpenCV QRCodeDetector okrúhle body nečíta (nie je cieľový dekodér).
 - Webový nástroj načítava `qrcode-generator` z cdnjs (pinovaná 1.4.4); bez internetu funguje len `npm run qr`.
 
+**Ďalej**
+- QR kód SFZ (kruh, odkaz na LinkedIn) nasadený ako PNG na záverečný slajd prezentácie UKF Nitra; overený ZXing pri 200 – 1024 px.
+- v1.3.1 tag overený; v1.4.0 čaká na vytvorenie cez GitHub Releases.
+
 **Čo nefungovalo a prečo**
 - Úložisko assetov artefaktu odstránilo z nahraného SVG vložené logo (sanitizácia `href` s data URI); v artefakte je preto náhľad QR ako PNG a dokumentácia odporúča PNG pre takéto systémy.
 - Pri polomere bodu 0,43 modulu zlyhávali dlhé odkazy častejšie; zväčšené na 0,46.
