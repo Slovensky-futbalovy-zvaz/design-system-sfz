@@ -2,10 +2,11 @@
 
 Formát podľa [Keep a Changelog](https://keepachangelog.com/sk/1.1.0/), verzie podľa [SemVer](https://semver.org/lang/sk/).
 
-## [Nevydané]
+## [1.5.1] – 2026-10-22
 
 ### Zmenené
 - Repozitár premenovaný na `Slovensky-futbalovy-zvaz/sfz-design-system` (predtým `design-system-sfz`; GitHub staré adresy presmerúva). Aktualizované odkazy v README, `package.json`, `CLAUDE.md`, skille a návode na prenos. Názov npm balíka sa nemení.
+- Ukážka titulného slajdu (`SlideTitle`): správny názov „Fakulta ekonomiky a manažmentu SPU v Nitre“.
 
 ## [1.5.0] – 2026-10-22
 

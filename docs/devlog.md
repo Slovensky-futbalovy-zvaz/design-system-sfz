@@ -2,7 +2,7 @@
 
 Pracovný denník repozitára. Najnovší záznam hore. E‑maily, tokeny a ID sú v zápisoch maskované.
 
-## 2026-10-22 (večer) – premenovanie repozitára
+## 2026-10-22 (večer) – v1.5.1, premenovanie repozitára
 
 **Čo sa urobilo**
 - v1.5.0 zverejnená cez GitHub Releases.
@@ -12,6 +12,7 @@ Pracovný denník repozitára. Najnovší záznam hore. E‑maily, tokeny a ID s
 - Staré adresy `design-system-sfz` GitHub presmerúva, kým niekto nevytvorí repozitár so starým názvom.
 - Publikovanie do GitHub Packages po premenovaní overí až najbližší release.
 - Skill `sfz-prezentacia` uložený v konte Claude treba aktualizovať (nový odkaz na repozitár).
+- v1.5.1: tag sa vytvára cez GitHub Releases (push tagov z prostredia Claude neprechádza).
 
 ## 2026-10-22 – v1.5.0
 
