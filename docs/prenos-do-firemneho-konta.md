@@ -4,13 +4,13 @@ Artefakty na claude.ai patria kontu, v ktorom vznikli. Zdrojom pravdy je preto t
 
 ## 1. Pripojte GitHub
 
-Repozitár je verejný, takže na čítanie stačí jeho adresa. Vo firemnom konte Claude pripojte GitHub s prístupom k organizácii **Slovensky-futbalovy-zvaz** a k repozitáru `design-system-sfz` len vtedy, ak má Claude do repozitára aj zapisovať (ak je aplikácia Claude povolená len pre vybrané repozitáre, pridajte ho v nastaveniach organizácie: Settings → GitHub Apps → Claude → Repository access). Použitie obsahu sa riadi [`LICENSE.md`](../LICENSE.md).
+Repozitár je verejný, takže na čítanie stačí jeho adresa. Vo firemnom konte Claude pripojte GitHub s prístupom k organizácii **Slovensky-futbalovy-zvaz** a k repozitáru `sfz-design-system` len vtedy, ak má Claude do repozitára aj zapisovať (ak je aplikácia Claude povolená len pre vybrané repozitáre, pridajte ho v nastaveniach organizácie: Settings → GitHub Apps → Claude → Repository access). Použitie obsahu sa riadi [`LICENSE.md`](../LICENSE.md).
 
 ## 2. Vytvorte artefakt design systému
 
 Napíšte Claude:
 
-> Vytvor Design System artefakt „SFZ Design System“ z repozitára Slovensky-futbalovy-zvaz/design-system-sfz. Postupuj podľa docs/artefakt/README.md: brand book z docs/brand-book.md, tokeny z tokens/tokens.json, komponenty a náhľady z components/ a docs/artefakt/components/, logá zo všetkých skupín v brand/logos/ nahraj ako assety.
+> Vytvor Design System artefakt „SFZ Design System“ z repozitára Slovensky-futbalovy-zvaz/sfz-design-system. Postupuj podľa docs/artefakt/README.md: brand book z docs/brand-book.md, tokeny z tokens/tokens.json, komponenty a náhľady z components/ a docs/artefakt/components/, logá zo všetkých skupín v brand/logos/ nahraj ako assety.
 
 Výsledok skontrolujte: farby a logá v sekcii Assets, náhľady komponentov vo svetlej aj tmavej téme.
 
@@ -18,7 +18,7 @@ Výsledok skontrolujte: farby a logá v sekcii Assets, náhľady komponentov vo 
 
 Skill je v [`docs/skills/sfz-prezentacia/SKILL.md`](skills/sfz-prezentacia/SKILL.md). Vo firemnom konte napíšte Claude:
 
-> Ulož ako skill obsah súboru docs/skills/sfz-prezentacia/SKILL.md z repozitára Slovensky-futbalovy-zvaz/design-system-sfz.
+> Ulož ako skill obsah súboru docs/skills/sfz-prezentacia/SKILL.md z repozitára Slovensky-futbalovy-zvaz/sfz-design-system.
 
 Claude ukáže kartu so skillom, ktorú potvrdíte. Skill hľadá design systém podľa názvu „SFZ Design System“, preto funguje v každom konte, kde tento artefakt existuje.
 

@@ -19,7 +19,7 @@ Potom navrhni osnovu (bloky, minutáž, počet slajdov) a počkaj na schválenie
 
 - Prezentáciu vytvor z typu **Slides**.
 - Ako design systém použi artefakt **„SFZ Design System“** (nájdi ho v zozname Design System artefaktov podľa názvu) a nainštaluj ho do decku podľa pokynov typu Slides. Nikdy si nevymýšľaj vlastnú paletu.
-- Ak v konte SFZ Design System nie je: povedz to a ponúkni jeho vytvorenie z GitHub repozitára `Slovensky-futbalovy-zvaz/design-system-sfz` (tokens/tokens.json, brand/logos/, docs/brand-book.md, templates/prezentacie/).
+- Ak v konte SFZ Design System nie je: povedz to a ponúkni jeho vytvorenie z GitHub repozitára `Slovensky-futbalovy-zvaz/sfz-design-system` (tokens/tokens.json, brand/logos/, docs/brand-book.md, templates/prezentacie/).
 - Logá ber len zo systému alebo z repozitára (`brand/logos/`); nikdy ich nekresli ani neprefarbuj. Na modrej ploche biely variant, na bielej farebný. Logo D v päte každého slajdu (56 px), logo A na titulnom a záverečnom slajde.
 
 ## 3. Skladba prezentácie (vzory SFZ)

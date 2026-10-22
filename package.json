@@ -6,7 +6,7 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Slovensky-futbalovy-zvaz/design-system-sfz.git"
+    "url": "git+https://github.com/Slovensky-futbalovy-zvaz/sfz-design-system.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

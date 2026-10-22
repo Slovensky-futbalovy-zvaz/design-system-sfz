@@ -1,4 +1,4 @@
-# CLAUDE.md – pravidlá repozitára design-system-sfz
+# CLAUDE.md – pravidlá repozitára sfz-design-system
 
 - Jazyk dokumentácie, komentárov a commitov: slovenčina.
 - Hodnoty farieb, typografie a medzier meniť **len v `tokens/tokens.json`**, potom `npm run build:tokens`. `tokens/tokens.css` neupravovať ručne.

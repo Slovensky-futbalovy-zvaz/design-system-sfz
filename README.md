@@ -60,7 +60,7 @@ npm install @sfz/design-system@npm:@slovensky-futbalovy-zvaz/design-system@^1.5.
 ### Varianta B – priamo z gitu (bez tokenu)
 
 ```bash
-npm install github:Slovensky-futbalovy-zvaz/design-system-sfz#v1.5.0
+npm install github:Slovensky-futbalovy-zvaz/sfz-design-system#v1.5.0
 ```
 
 ```js
